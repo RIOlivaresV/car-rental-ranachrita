@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "496952838351",
+    "project_id": "ranachrita-3f59d",
+    "storage_bucket": "ranachrita-3f59d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496952838351:android:19864baf6529828c9acfba",
+        "android_client_info": {
+          "package_name": "com.example.carrentalranachrita"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "496952838351-6e3ndc6cjfijnc5nrn0pehjjbie5kadp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBLAuJZ6_lQttCkVI95rN1sgDsF0yZaps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "496952838351-6e3ndc6cjfijnc5nrn0pehjjbie5kadp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
