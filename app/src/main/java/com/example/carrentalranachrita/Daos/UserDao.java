@@ -6,6 +6,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import org.w3c.dom.Entity;
 
+import java.util.List;
+
 public class UserDao implements IDao<User>{
     private String Reference = "user";
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
@@ -32,6 +34,16 @@ public class UserDao implements IDao<User>{
         }catch (Exception e){
 
         }
+        return null;
+    }
+
+    @Override
+    public List<User> SelectAll() {
+        return null;
+    }
+
+    @Override
+    public User Update(User entity) {
         return null;
     }
 
