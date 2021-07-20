@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/raingBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/carImageView"
+                android:layout_width="142dp"
+                android:layout_height="160dp"
+                android:layout_gravity="top|left"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_launcher_background"
+                app:srcCompat="@drawable/image_1"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/pricetTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="$10 per day"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/carNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Car's name"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/carColorTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="car's color"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/carConditionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="15dp"
+                android:text="Minumum 2 days"
+                android:textColor="#1A1B1B"
+                android:textSize="24sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -14,8 +14,8 @@
             android:id="@+id/goHome"
             app:destination="@id/homeApp" />
         <action
-            android:id="@+id/action_login_to_carListFragment"
-            app:destination="@id/carListFragment" />
+            android:id="@+id/action_login_to_carList"
+            app:destination="@id/carList" />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
@@ -32,8 +32,8 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/carListFragment"
-        android:name="com.example.carrentalranachrita.carListFragment"
+        android:id="@+id/carList"
+        android:name="com.example.carrentalranachrita.CarList"
         android:label="fragment_car_list"
         tools:layout="@layout/fragment_car_list" />
 </navigation>
