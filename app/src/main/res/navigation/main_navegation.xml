@@ -36,4 +36,9 @@
         android:name="com.example.carrentalranachrita.carListFragment"
         android:label="fragment_car_list"
         tools:layout="@layout/fragment_car_list" />
+    <fragment
+        android:id="@+id/hostAddCar"
+        android:name="com.example.carrentalranachrita.HostAddCar"
+        android:label="fragment_host_add_car"
+        tools:layout="@layout/fragment_host_add_car" />
 </navigation>
