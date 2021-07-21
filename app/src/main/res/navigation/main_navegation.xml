@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_login_to_carListFragment"
             app:destination="@id/carListFragment" />
+        <action
+            android:id="@+id/action_login_to_hostAddCar"
+            app:destination="@id/hostAddCar" />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
@@ -40,22 +43,17 @@
         android:id="@+id/hostAddCar"
         android:name="com.example.carrentalranachrita.HostAddCar"
         android:label="fragment_host_add_car"
-        tools:layout="@layout/fragment_host_add_car" />
+        tools:layout="@layout/fragment_host_add_car" >
+        <action
+            android:id="@+id/action_hostAddCar_to_homeApp"
+            app:destination="@id/homeApp" />
+    </fragment>
     <fragment
         android:id="@+id/hostProfile"
         android:name="com.example.carrentalranachrita.hostProfile"
         android:label="fragment_host_profile"
         tools:layout="@layout/fragment_host_profile" />
-    <fragment
-        android:id="@+id/navigationHost"
-        android:name="com.example.carrentalranachrita.navigationHost"
-        android:label="fragment_navigation_host"
-        tools:layout="@layout/fragment_navigation_host" />
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/homeToAddCar"
-            app:destination="@id/addCarFragment" />
-    </fragment>
+
     <fragment
         android:id="@+id/addCarFragment"
         android:name="com.example.carrentalranachrita.AddCarFragment"
