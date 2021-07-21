@@ -41,4 +41,14 @@
         android:name="com.example.carrentalranachrita.HostAddCar"
         android:label="fragment_host_add_car"
         tools:layout="@layout/fragment_host_add_car" />
+    <fragment
+        android:id="@+id/hostProfile"
+        android:name="com.example.carrentalranachrita.hostProfile"
+        android:label="fragment_host_profile"
+        tools:layout="@layout/fragment_host_profile" />
+    <fragment
+        android:id="@+id/navigationHost"
+        android:name="com.example.carrentalranachrita.navigationHost"
+        android:label="fragment_navigation_host"
+        tools:layout="@layout/fragment_navigation_host" />
 </navigation>

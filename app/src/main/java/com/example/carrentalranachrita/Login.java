@@ -78,9 +78,7 @@ public class Login extends Fragment {
         });
 
         Button register = view.findViewById(R.id.btnRegister);
-        register.setOnClickListener(v -> {
-            findNavController(view).navigate(R.id.actionRegistration);
-        });
+      
         return view;
     }
 

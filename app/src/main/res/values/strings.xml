@@ -112,4 +112,16 @@
     <string name="txtCarDetail">Detail</string>
     <string name="driverAvailableBtn">I am available as a driver</string>
     <string name="insuranceBtn">Insurance</string>
+    <string name="hostFirstName">First Name</string>
+    <string name="txtHostFirstName">Christy</string>
+    <string name="hostSurname">Surname</string>
+    <string name="txtHostSurname">Kinmunju</string>
+    <string name="hostPhoneNumber">Phone Number</string>
+    <string name="txtHostPhoneNumber">+1 777-888-9999</string>
+    <string name="hostEmail">Email</string>
+    <string name="txtHostEmail">christadam787@gmail.com</string>
+    <string name="hostPassword">Password</string>
+    <string name="txtHostPassword">.......................</string>
+
+    <string name="hostProfile">Profile</string>
 </resources>
