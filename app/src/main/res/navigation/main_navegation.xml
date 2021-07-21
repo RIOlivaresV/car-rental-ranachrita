@@ -51,4 +51,14 @@
         android:name="com.example.carrentalranachrita.navigationHost"
         android:label="fragment_navigation_host"
         tools:layout="@layout/fragment_navigation_host" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/homeToAddCar"
+            app:destination="@id/addCarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCarFragment"
+        android:name="com.example.carrentalranachrita.AddCarFragment"
+        android:label="fragment_add_car"
+        tools:layout="@layout/fragment_add_car" />
 </navigation>
