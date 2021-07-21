@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/goHome"
-            app:destination="@id/homeApp" />
+            app:destination="@id/hostAddCar" />
         <action
             android:id="@+id/action_login_to_carListFragment"
             app:destination="@id/carListFragment" />
