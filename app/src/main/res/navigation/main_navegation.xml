@@ -35,5 +35,14 @@
         android:id="@+id/carList"
         android:name="com.example.carrentalranachrita.CarList"
         android:label="fragment_car_list"
-        tools:layout="@layout/fragment_car_list" />
+        tools:layout="@layout/fragment_car_list" >
+        <action
+            android:id="@+id/action_carList_to_filterFragment"
+            app:destination="@id/filterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.example.carrentalranachrita.FilterFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" />
 </navigation>
