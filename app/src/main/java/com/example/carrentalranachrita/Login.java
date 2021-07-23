@@ -67,7 +67,7 @@ public class Login extends Fragment {
                         @Override
                         public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
-                                findNavController(view).navigate(R.id.goHome);
+                                findNavController(view).navigate(R.id.carList);
                                 Snackbar.make(view, "Welcome", Snackbar.LENGTH_LONG).show();
                             }else {
                                 Snackbar.make(view, "Something wrong is happening, please try again", Snackbar.LENGTH_LONG).show();
@@ -79,7 +79,7 @@ public class Login extends Fragment {
 
         Button register = view.findViewById(R.id.btnRegister);
         register.setOnClickListener(v -> {
-            findNavController(view).navigate(R.id.actionRegistration);
+            findNavController(view).navigate(R.id.registrationFragment);
         });
         return view;
     }
