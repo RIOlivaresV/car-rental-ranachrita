@@ -11,9 +11,6 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/goHome"
-            app:destination="@id/homeApp" />
-        <action
             android:id="@+id/action_login_to_carList"
             app:destination="@id/carList" />
     </fragment>
@@ -26,11 +23,6 @@
             android:id="@+id/backLogin"
             app:destination="@id/login" />
     </fragment>
-    <fragment
-        android:id="@+id/homeApp"
-        android:name="com.example.carrentalranachrita.Home"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/carList"
         android:name="com.example.carrentalranachrita.CarList"
