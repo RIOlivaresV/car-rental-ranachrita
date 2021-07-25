@@ -8,7 +8,9 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -115,7 +117,7 @@
             <Button
                 android:id="@+id/checkAvailabilityButton"
                 android:layout_width="match_parent"
-                android:layout_height="63dp"
+                android:layout_height="70dp"
                 android:layout_margin="5dp"
                 android:text="Check Availability"
                 android:textSize="16sp" />
@@ -230,7 +232,67 @@
                     android:layout_marginRight="5dp"
                     android:text="Nazanin Binesh"
                     android:textSize="20sp" />
+
             </LinearLayout>
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/insuranceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Insurance Condition:"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/addInsuranceButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:layout_weight="1"
+                    android:text="Add Insurance"
+                    android:textSize="18sp"
+                    app:backgroundTint="#928D9C" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/priceValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="$150 CAD"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/bookButton"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_marginTop="20dp"
+                android:text="Book"
+                android:textSize="24sp"
+                app:backgroundTint="#009688" />
 
         </LinearLayout>
     </ScrollView>
