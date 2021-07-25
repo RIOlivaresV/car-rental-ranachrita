@@ -91,4 +91,37 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="location">Your Location</string>
+    <string name="year">Year</string>
+    <string name="make">Make</string>
+    <string name="model">Model</string>
+    <string name="color">Color</string>
+    <string name="odmometer">Odmometer</string>
+    <string name="transmission">Transmission</string>
+    <string name="uploadImage">Upload Image</string>
+    <string name="carDetail">Car Detail</string>
+    <string name="carAvailability">Car Availability</string>
+    <string name="txtLocationHost">location</string>
+    <string name="txtCarColor">Color</string>
+    <string name="odometer">Odometer</string>
+    <string name="automaticBtn">Automatic</string>
+    <string name="manualBtn">Manual</string>
+    <string name="txtUploadImage">Enter directory</string>
+    <string name="uploadBtn">Browse</string>
+    <string name="txtCarAvailability">Availability</string>
+    <string name="txtCarDetail">Detail</string>
+    <string name="driverAvailableBtn">I am available as a driver</string>
+    <string name="insuranceBtn">Insurance</string>
+    <string name="hostFirstName">First Name</string>
+    <string name="txtHostFirstName">Christy</string>
+    <string name="hostSurname">Surname</string>
+    <string name="txtHostSurname">Kinmunju</string>
+    <string name="hostPhoneNumber">Phone Number</string>
+    <string name="txtHostPhoneNumber">+1 777-888-9999</string>
+    <string name="hostEmail">Email</string>
+    <string name="txtHostEmail">christadam787@gmail.com</string>
+    <string name="hostPassword">Password</string>
+    <string name="txtHostPassword">.......................</string>
+
+    <string name="hostProfile">Profile</string>
 </resources>
