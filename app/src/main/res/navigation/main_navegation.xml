@@ -14,8 +14,8 @@
             android:id="@+id/action_login_to_carListFragment"
             app:destination="@id/carListFragment" />
         <action
-            android:id="@+id/action_login_to_hostAddCar"
-            app:destination="@id/hostProfile" />
+            android:id="@+id/action_login_to_showCarRequestForHost"
+            app:destination="@id/showCarRequestForHost" />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
@@ -56,4 +56,9 @@
         android:name="com.example.carrentalranachrita.AddCarFragment"
         android:label="fragment_add_car"
         tools:layout="@layout/fragment_add_car" />
+    <activity
+        android:id="@+id/showCarRequestForHost"
+        android:name="com.example.carrentalranachrita.showCarRequestForHost"
+        android:label="activity_show_car_request_for_host"
+        tools:layout="@layout/activity_show_car_request_for_host" />
 </navigation>

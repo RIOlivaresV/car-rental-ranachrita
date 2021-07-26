@@ -124,4 +124,7 @@
     <string name="txtHostPassword">.......................</string>
 
     <string name="hostProfile">Profile</string>
+    <string name="txtTripDetail">Trip</string>
+    <string name="confirmBtn">CONFIRM</string>
+    <string name="declineBtn">DECLINE</string>
 </resources>
