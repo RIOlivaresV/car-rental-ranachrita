@@ -127,4 +127,5 @@
     <string name="txtTripDetail">Trip</string>
     <string name="confirmBtn">CONFIRM</string>
     <string name="declineBtn">DECLINE</string>
+    <string name="yrRequest">YOUR REQUESTS</string>
 </resources>

@@ -6,11 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".showCarRequestForHost">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/yrRequest"
+            android:layout_gravity="top|center"
+            android:textSize="20dp"
+            android:text="@string/yrRequest"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewHostCarRequest"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbars="vertical"/>
+            android:layout_gravity="bottom"
+            android:layout_marginTop="50dp"
+            android:scrollbars="vertical" />
 
 </FrameLayout>
 
