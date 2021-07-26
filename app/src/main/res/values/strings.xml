@@ -128,4 +128,9 @@
     <string name="confirmBtn">CONFIRM</string>
     <string name="declineBtn">DECLINE</string>
     <string name="yrRequest">YOUR REQUESTS</string>
+    <string name="appName">RANACHRITA</string>
+    <string name="carName">Your Cars</string>
+    <string name="txtCarName">Car Name</string>
+    <string name="editBtn">EDIT</string>
+    <string name="deleteBtn">DELETE</string>
 </resources>
