@@ -67,9 +67,10 @@ public class Login extends Fragment {
                         @Override
                         public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
-                                findNavController(view).navigate(R.id.carList);
+//                                findNavController(view).navigate(R.id.carList);
                                 //to decide what is the home view depending of the rol
-                                // findNavController(view).navigate(R.id.hostProfile);
+//                                 findNavController(view).navigate(R.id.hostProfile);
+                                findNavController(view).navigate(R.id.hostAddCar);
                                 Snackbar.make(view, "Welcome", Snackbar.LENGTH_LONG).show();
                             }else {
                                 Snackbar.make(view, "Something wrong is happening, please try again", Snackbar.LENGTH_LONG).show();

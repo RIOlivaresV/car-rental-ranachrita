@@ -7,7 +7,11 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
 
 
         <LinearLayout
@@ -82,12 +86,13 @@
                     android:text="@string/make"
                     android:textSize="20dp" />
 
-                <Spinner
-                    android:id="@+id/spinnerMake"
-                    android:layout_width="300dp"
+                <EditText
+                    android:id="@+id/txtBrand"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
 
             </LinearLayout>
 
@@ -187,19 +192,27 @@
                     android:id="@+id/radioGrTransmission"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="2">
 
-                    <RadioButton
-                        android:id="@+id/automaticBtn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/automaticBtn" />
+                    <RadioGroup
+                        android:id="@+id/trasmissionRadio"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                    <RadioButton
-                        android:id="@+id/manualBtn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/manualBtn" />
+                        <RadioButton
+                            android:id="@+id/automaticBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/automaticBtn" />
+
+                        <RadioButton
+                            android:id="@+id/manualBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/manualBtn" />
+                    </RadioGroup>
+
                 </LinearLayout>
 
             </LinearLayout>

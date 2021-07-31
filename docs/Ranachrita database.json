@@ -1,4 +1,49 @@
 {
-
-    
+    "user": {
+        "id": 0,
+        "name": "string",
+        "lastName": "string",
+        "rol": "string",
+        "password": "string",
+        "email": "string",
+        "phoneNumber": "string"
+    },
+    "vehicle": [
+        {
+            "id": "string",
+            "model": "string",
+            "brand": "string",
+            "color": "string",
+            "odometer": "string",
+            "transmission": "string",
+            "imagen": "string",
+            "details": "string",
+            "year": 0,
+            "driverId": "string",
+            "hostId": "string",
+            "seats": 0,
+            "doors": 0,
+            "type": "string",
+            "avialableFrom": "string",
+            "avialableTo": "string",
+            "booking": [
+                {
+                    "dateStart": "string",
+                    "timeStart": "string",
+                    "customerId": "string",
+                    "dateEnd": "string",
+                    "timeEnd": "string",
+                    "insurence": {
+                        "details": "string"
+                    },
+                    "rate": {
+                        "id": "string",
+                        "vehicleId": "string",
+                        "userId": "string",
+                        "comment": "string"
+                    }
+                }
+            ]
+        }
+    ]
 }
