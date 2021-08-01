@@ -24,13 +24,21 @@ public class CarDao implements IDao<Car> {
     }
 
     @Override
-    public Car Select(Car entity) {
-        return null;
+    public DatabaseReference Select(Car entity) {
+        try {
+            return  UserReference;
+        } catch (Exception e){
+            return null;
+        }
     }
 
     @Override
-    public List<Car> SelectAll() {
-        return null;
+    public DatabaseReference SelectAll() {
+        try {
+            return  UserReference;
+        } catch (Exception e){
+            return null;
+        }
     }
 
     @Override
