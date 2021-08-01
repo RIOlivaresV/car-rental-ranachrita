@@ -16,7 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CarRentalRanachrita">
-        <activity android:name=".showListOfCarsAddedByHost"></activity>
+        <activity android:name=".confirmBookingForCustomer"></activity>
+        <activity android:name=".customerPolicyPage" />
+        <activity android:name=".showListOfCarsAddedByHost" />
         <activity android:name=".showCarRequestForHost" />
         <activity android:name=".MainActivity">
             <intent-filter>
