@@ -11,9 +11,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -21,6 +24,7 @@ import com.example.carrentalranachrita.Daos.CarDao;
 import com.example.carrentalranachrita.Entities.Booking;
 import com.example.carrentalranachrita.Entities.Car;
 import com.google.android.material.datepicker.MaterialDatePicker;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -29,6 +33,7 @@ import java.util.Date;
 import java.util.Locale;
 
 public class HostAddCar extends Fragment {
+
 
     public SimpleDateFormat sdf = new SimpleDateFormat("EEE MMM dd, yyyy HH:mm:ss z ", Locale.ENGLISH);
     public HostAddCar() {
@@ -50,22 +55,32 @@ public class HostAddCar extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        ArrayList<String> years = new ArrayList<String>();
+        int thisYear = Calendar.getInstance().get(Calendar.YEAR);
+        for (int i = 1900; i <= thisYear; i++) {
+            years.add(Integer.toString(i));
+        }
+
         // Inflate the layout for this fragment
         Calendar avialabilityFrom = Calendar.getInstance();
         Calendar avialibilityTo = Calendar.getInstance();
         View view = inflater.inflate(R.layout.fragment_host_add_car, container, false);
         Spinner yearInput = (Spinner)  view.findViewById(R.id.spinnerYear);
         EditText brandInput = (EditText) view.findViewById(R.id.txtBrand);
-        Spinner modelInput = (Spinner) view.findViewById(R.id.spinnerModel);
+        EditText modelInput = (EditText) view.findViewById(R.id.txtModel);
         EditText colorInput = (EditText) view.findViewById(R.id.txtCarColor);
-        Spinner odometerInput = (Spinner) view.findViewById(R.id.spinnerOdometer);
+        EditText odometerInput = (EditText) view.findViewById(R.id.txtOdometer);
         Button uploadInput = (Button) view.findViewById(R.id.uploadBtn);
         EditText carAvailabilityInput = (EditText)  view.findViewById(R.id.txtCarAvailability);
         EditText carDetailInput = (EditText) view.findViewById(R.id.txtCarDetail);
         CheckBox ownerAsDriverInput = (CheckBox) view.findViewById(R.id.driverAvailableBtn);
         CheckBox insureInput = (CheckBox) view.findViewById(R.id.insuranceBtn);
         Button addCarButton = (Button) view.findViewById(R.id.addCarBtn);
+        RadioButton radioAuto = (RadioButton)view.findViewById(R.id.automaticBtn);
+        RadioButton radioManual = (RadioButton)view.findViewById(R.id.manualBtn);
 
+        ArrayAdapter<String> adapterYear = new ArrayAdapter<String>(view.getContext(), android.R.layout.simple_spinner_dropdown_item, years);
+        yearInput.setAdapter(adapterYear);
         Calendar today = Calendar.getInstance();
         carAvailabilityInput.setOnClickListener(v -> {
             MaterialDatePicker.Builder<Pair<Long, Long>> build = MaterialDatePicker.Builder.dateRangePicker();
@@ -88,8 +103,17 @@ public class HostAddCar extends Fragment {
         addCarButton.setOnClickListener(v -> {
             Car newCar = new Car();
 
+            if (!radioAuto.isChecked()){
+                if (!radioManual.isChecked()){
+                    radioManual.setError("Please, select one transmission");
+                }else {
+                    newCar.setTransmission("Manual");
+                }
+            }else{
+                newCar.setTransmission("Automatic");
+            }
             if (modelInput == null){
-                ((TextView)modelInput.getSelectedView()).setError("Please, select a model");
+                modelInput.setError("Please, select a model");
             }
             if (brandInput.getText().toString().isEmpty()){
                 ((TextView)brandInput).setError("Please, select a brand");
@@ -101,13 +125,14 @@ public class HostAddCar extends Fragment {
                 colorInput.setError("Color is needed");
             }
             if (odometerInput == null){
-                ((TextView)odometerInput.getSelectedView()).setError("Odometer is needed");
+                odometerInput.setError("Odometer is needed");
             }
-//            newCar.setYear(Integer.parseInt(yearInput.getSelectedItem().toString()));
+
+            newCar.setYear(Integer.parseInt(yearInput.getSelectedItem().toString()));
             newCar.setBrand(brandInput.getText().toString());
-//            newCar.setModel(modelInput.getSelectedItem().toString());
+            newCar.setModel(modelInput.getText().toString());
             newCar.setColor(colorInput.getText().toString());
-//            newCar.setOdometer(odometerInput.getSelectedItem().toString());
+            newCar.setOdometer(odometerInput.getText().toString());
             newCar.setFrom(avialabilityFrom.getTime());
             newCar.setTo(avialibilityTo.getTime());
             newCar.setOwnerDriver(ownerAsDriverInput.isChecked());
@@ -115,6 +140,7 @@ public class HostAddCar extends Fragment {
 
             CarDao dao = new CarDao();
             dao.Insert(newCar);
+            Snackbar.make(view, "Your cars was added.", Snackbar.LENGTH_LONG);
         });
         return view;
     }

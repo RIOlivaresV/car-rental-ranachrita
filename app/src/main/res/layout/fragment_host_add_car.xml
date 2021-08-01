@@ -92,6 +92,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
+                    android:hint="Brand"
                     android:inputType="textPersonName" />
 
             </LinearLayout>
@@ -112,12 +113,14 @@
                     android:text="@string/model"
                     android:textSize="20dp" />
 
-                <Spinner
-                    android:id="@+id/spinnerModel"
-                    android:layout_width="300dp"
+                <EditText
+                    android:id="@+id/txtModel"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Model"
+                    android:inputType="textPersonName" />
 
             </LinearLayout>
 
@@ -154,21 +157,23 @@
 
                 <TextView
                     android:id="@+id/odometer"
-                    android:layout_width="227dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
-                    android:layout_weight="1"
+                    android:layout_weight="3"
                     android:gravity="center|left"
                     android:text="@string/odometer"
                     android:textSize="20dp" />
 
-                <Spinner
-                    android:id="@+id/spinnerOdometer"
-                    android:layout_width="358dp"
+                <EditText
+                    android:id="@+id/txtOdometer"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Odometer"
+                    android:inputType="textPersonName" />
 
             </LinearLayout>
 
@@ -179,7 +184,7 @@
 
                 <TextView
                     android:id="@+id/Transmission"
-                    android:layout_width="285dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
@@ -190,13 +195,13 @@
 
                 <LinearLayout
                     android:id="@+id/radioGrTransmission"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="2">
 
                     <RadioGroup
                         android:id="@+id/trasmissionRadio"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
