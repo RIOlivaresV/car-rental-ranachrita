@@ -133,4 +133,16 @@
     <string name="txtCarName">Car Name</string>
     <string name="editBtn">EDIT</string>
     <string name="deleteBtn">DELETE</string>
+    <string name="txtReviewPolicy">Review term of service</string>
+    <string name="txtReviewPolicyParagraph">RANACHRITA\'s mission is to pull the worlds\'s one billion better use by connecting people looking for hosts who want to share their cars.</string>
+    <string name="rentingTimeJustTxt">Renting Time</string>
+    <string name="txtStartTime">Start:</string>
+    <string name="txtEndTime">End:</string>
+    <string name="txtSetStartTime">Show the time and date for the beginning</string>
+    <string name="txtSetEndTime">Show the end time and date</string>
+    <string name="agreeTermsAndConditionsBtn">I agree with the terms and conditions</string>
+    <string name="understoodTimePolicyBtn">I understand the time police</string>
+    <string name="msgShowReqSuccess">Your Request has been registered successfully!!</string>
+    <string name="txtMsgReqWillFinalized">Your request will be finalized after a short view. Please check your notifications.</string>
+    <string name="CloseBtn">Close</string>
 </resources>
