@@ -16,8 +16,11 @@
             android:id="@+id/action_login_to_carListFragment"
             app:destination="@id/carListFragment" /> -->
         <action
-            android:id="@+id/action_login_to_showListOfCarsAddedByHost"
-            app:destination="@id/showListOfCarsAddedByHost" />
+            android:id="@+id/action_login_to_confirmBookingForCustomer"
+            app:destination="@id/confirmBookingForCustomer" />
+        <action
+            android:id="@+id/action_login_to_confirmBookingForCustomer2"
+            app:destination="@id/confirmBookingForCustomer" />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
@@ -82,4 +85,14 @@
         android:name="com.example.carrentalranachrita.showListOfCarsAddedByHost"
         android:label="activity_show_list_of_cars_added_by_host"
         tools:layout="@layout/activity_show_list_of_cars_added_by_host" />
+    <activity
+        android:id="@+id/confirmBookingForCustomer"
+        android:name="com.example.carrentalranachrita.confirmBookingForCustomer"
+        android:label="activity_confirm_booking_for_customer"
+        tools:layout="@layout/activity_confirm_booking_for_customer" />
+    <activity
+        android:id="@+id/customerPolicyPage"
+        android:name="com.example.carrentalranachrita.customerPolicyPage"
+        android:label="activity_customer_policy_page"
+        tools:layout="@layout/activity_customer_policy_page" />
 </navigation>
