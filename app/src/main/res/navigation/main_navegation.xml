@@ -9,19 +9,7 @@
         android:id="@+id/login"
         android:name="com.example.carrentalranachrita.Login"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
-        <!-- <action
-            android:id="@+id/action_login_to_carList"
-            app:destination="@id/carList" />
-            android:id="@+id/action_login_to_carListFragment"
-            app:destination="@id/carListFragment" /> -->
-        <action
-            android:id="@+id/action_login_to_confirmBookingForCustomer"
-            app:destination="@id/confirmBookingForCustomer" />
-        <action
-            android:id="@+id/action_login_to_confirmBookingForCustomer2"
-            app:destination="@id/confirmBookingForCustomer" />
-    </fragment>
+        tools:layout="@layout/fragment_login" />
     <fragment
         android:id="@+id/registrationFragment"
         android:name="com.example.carrentalranachrita.RegistrationFragment"
@@ -39,9 +27,6 @@
         <action
             android:id="@+id/action_carList_to_filterFragment"
             app:destination="@id/filterFragment" />
-        <action
-            android:id="@+id/action_carList_to_carDetail"
-            app:destination="@id/carDetail" />
     </fragment>
     <fragment
         android:id="@+id/filterFragment"
@@ -70,11 +55,6 @@
         android:label="fragment_host_profile"
         tools:layout="@layout/fragment_host_profile" />
 
-    <fragment
-        android:id="@+id/addCarFragment"
-        android:name="com.example.carrentalranachrita.AddCarFragment"
-        android:label="fragment_add_car"
-        tools:layout="@layout/fragment_add_car" />
     <activity
         android:id="@+id/showCarRequestForHost"
         android:name="com.example.carrentalranachrita.showCarRequestForHost"

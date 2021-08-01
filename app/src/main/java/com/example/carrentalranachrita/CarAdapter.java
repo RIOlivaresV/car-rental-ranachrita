@@ -1,8 +1,11 @@
 package com.example.carrentalranachrita;
 
+import android.app.AlertDialog;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RatingBar;
@@ -20,9 +23,12 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import static androidx.navigation.Navigation.findNavController;
+
 public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder>{
     private ArrayList<Car> carArrayList;
     public SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy", Locale.ENGLISH);
+    private View currentView;
 
     public CarAdapter(ArrayList<Car> carArrayList) {
         this.carArrayList = carArrayList;
@@ -30,6 +36,10 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder>{
 
     public CarAdapter() {
         carArrayList = new ArrayList<Car>();
+    }
+
+    public void addView(View view){
+        this.currentView = view;
     }
 
     public void addCar(Car car){
@@ -61,6 +71,17 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder>{
         viewHolder.carTransmission.setText(car.getTransmission());
         viewHolder.carFrom.setText(sdf.format(car.getFrom()));
         viewHolder.carTo.setText(sdf.format(car.getTo()));
+        viewHolder.image.setClickable(true);
+        viewHolder.image.setOnClickListener(v -> {
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(currentView.getContext());
+            alertDialog.setTitle("Delete Car");
+            alertDialog.setMessage("Do you want to delete "+car.getBrand()+" - "+car.getModel());
+            alertDialog.setCancelable(true);
+            alertDialog.setNegativeButton("No", (dialog, which) -> {
+                dialog.dismiss();
+            });
+            alertDialog.show();
+        });
         viewHolder.ratingBar.setIsIndicator(true);
         String driver = "The car's owner can be driver.";
         if (car.isOwnerDriver()){
@@ -69,7 +90,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder>{
             viewHolder.carDriver.setVisibility(View.INVISIBLE);
         }
         viewHolder.layout.setOnClickListener(v -> {
-            Snackbar.make(viewHolder.itemView, "You click me", Snackbar.LENGTH_LONG).show();
+            findNavController(currentView).navigate(R.id.carDetail);
         });
     }
 
@@ -87,6 +108,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder>{
         TextView carDriver ;
         LinearLayout layout;
         RatingBar ratingBar;
+        ImageView image;
 
         public ViewHolder(View v) {
             super(v);
@@ -102,6 +124,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder>{
             carDriver = (TextView) v.findViewById(R.id.carEnableDriver);
             layout = (LinearLayout) v.findViewById(R.id.carItemList);
             ratingBar = (RatingBar) v.findViewById(R.id.ratingBar);
+            image = (ImageView) v.findViewById(R.id.btnDeleteCar);
         }
     }
 
