@@ -11,14 +11,8 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_login_to_carListFragment"
-            app:destination="@id/carListFragment" />
-        <action
-            android:id="@+id/action_login_to_confirmBookingForCustomer"
-            app:destination="@id/confirmBookingForCustomer" />
-        <action
-            android:id="@+id/action_login_to_confirmBookingForCustomer2"
-            app:destination="@id/confirmBookingForCustomer" />
+            android:id="@+id/action_login_to_customerAddCardForPayment"
+            app:destination="@id/customerAddCardForPayment" />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
@@ -68,8 +62,24 @@
         android:name="com.example.carrentalranachrita.customerPolicyPage"
         android:label="activity_customer_policy_page"
         tools:layout="@layout/activity_customer_policy_page" />
+    <fragment
+        android:id="@+id/carList"
+        android:name="com.example.carrentalranachrita.CarList"
+        android:label="fragment_car_list"
+        tools:layout="@layout/fragment_car_list" />
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.example.carrentalranachrita.FilterFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" />
+    <fragment
+        android:id="@+id/carDetail2"
+        android:name="com.example.carrentalranachrita.CarDetail"
+        android:label="fragment_car_detail"
+        tools:layout="@layout/fragment_car_detail" />
     <activity
         android:id="@+id/customerAddCardForPayment"
         android:name="com.example.carrentalranachrita.customerAddCardForPayment"
-        android:label="customerAddCardForPayment" />
+        android:label="activity_customer_add_card_for_payment"
+        tools:layout="@layout/activity_customer_add_card_for_payment" />
 </navigation>
