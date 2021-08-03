@@ -1,24 +1,20 @@
 package com.example.carrentalranachrita.Daos;
 
-import com.example.carrentalranachrita.Entities.User;
+import com.example.carrentalranachrita.Entities.Car;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import org.w3c.dom.Entity;
-
 import java.util.List;
 
-public class UserDao implements IDao<User>{
-    private String Reference = "user";
+public class CarDao implements IDao<Car> {
+    private String Reference = "car";
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference UserReference;
 
-    public UserDao() {
-        UserReference = firebaseDatabase.getReference(Reference);
-    }
+    public CarDao(){UserReference = firebaseDatabase.getReference(Reference);}
 
     @Override
-    public boolean Insert(User entity) {
+    public boolean Insert(Car entity) {
         try {
             UserReference.push().setValue(entity);
             return  true;
@@ -29,21 +25,29 @@ public class UserDao implements IDao<User>{
 
     @Override
     public DatabaseReference Select(String id) {
-        return null;
+        try {
+            return  UserReference.child(id);
+        } catch (Exception e){
+            return null;
+        }
     }
 
     @Override
     public DatabaseReference SelectAll() {
+        try {
+            return  UserReference;
+        } catch (Exception e){
+            return null;
+        }
+    }
+
+    @Override
+    public Car Update(Car entity) {
         return null;
     }
 
     @Override
-    public User Update(User entity) {
-        return null;
-    }
-
-    @Override
-    public boolean Delete(User entity) {
+    public boolean Delete(Car entity) {
         return false;
     }
 }

@@ -14,8 +14,11 @@
             android:id="@+id/action_login_to_carListFragment"
             app:destination="@id/carListFragment" />
         <action
-            android:id="@+id/action_login_to_customerAddCardForPayment"
-            app:destination="@id/customerAddCardForPayment" />
+            android:id="@+id/action_login_to_confirmBookingForCustomer"
+            app:destination="@id/confirmBookingForCustomer" />
+        <action
+            android:id="@+id/action_login_to_confirmBookingForCustomer2"
+            app:destination="@id/confirmBookingForCustomer" />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
@@ -26,24 +29,13 @@
             android:id="@+id/backLogin"
             app:destination="@id/login" />
     </fragment>
-    <fragment
-        android:id="@+id/homeApp"
-        android:name="com.example.carrentalranachrita.Home"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
-    <fragment
-        android:id="@+id/carListFragment"
-        android:name="com.example.carrentalranachrita.carListFragment"
-        android:label="fragment_car_list"
-        tools:layout="@layout/fragment_car_list" />
+
+
     <fragment
         android:id="@+id/hostAddCar"
         android:name="com.example.carrentalranachrita.HostAddCar"
         android:label="fragment_host_add_car"
         tools:layout="@layout/fragment_host_add_car" >
-        <action
-            android:id="@+id/action_hostAddCar_to_homeApp"
-            app:destination="@id/homeApp" />
     </fragment>
     <fragment
         android:id="@+id/hostProfile"
