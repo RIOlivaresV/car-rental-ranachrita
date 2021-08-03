@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtPaymentTopic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="@string/txtPaymentTopic"
+            android:layout_marginBottom="20dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtEnterNameOnCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtEnterNameOnCard"
+                    android:textSize="28sp" />
+
+                <EditText
+                    android:id="@+id/editTxtNameOnCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_person"
+                    android:ems="24"
+                    android:hint="@string/editTxtNameOnCard"
+                    android:inputType="textPersonName"
+                    android:autofillHints=""
+                    android:drawableStart="@drawable/ic_person" />
+
+                <TextView
+                    android:id="@+id/txtCardTopic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtCardTopic"
+                    android:textSize="28sp" />
+
+                <EditText
+                    android:id="@+id/editTxtCardNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_credit_card"
+                    android:ems="10"
+                    android:hint="@string/editTxtCardNumber"
+                    android:inputType="number"
+                    android:autofillHints=""
+                    android:drawableStart="@drawable/ic_credit_card" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtExpirationTopic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/txtExpirationTopic"
+                            android:textSize="28sp" />
+
+                        <EditText
+                            android:id="@+id/editTxtExpirationDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/ic_date"
+                            android:ems="10"
+                            android:hint="@string/editTxtExpirationDate"
+                            android:inputType="date"
+                            android:autofillHints=""
+                            android:drawableStart="@drawable/ic_date" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtCCVTopic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/txtCCVTopic"
+                            android:textSize="28sp" />
+
+                        <EditText
+                            android:id="@+id/editTxtCVC"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/ic_key"
+                            android:ems="10"
+                            android:hint="@string/editTxtCVC"
+                            android:inputType="numberPassword"
+                            android:autofillHints=""
+                            android:drawableStart="@drawable/ic_key" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <Button
+            android:id="@+id/btnPayThePayment"
+            android:layout_width="150dp"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="@string/btnPayThePayment" />
+    </LinearLayout>
+</FrameLayout>

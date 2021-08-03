@@ -14,11 +14,8 @@
             android:id="@+id/action_login_to_carListFragment"
             app:destination="@id/carListFragment" />
         <action
-            android:id="@+id/action_login_to_confirmBookingForCustomer"
-            app:destination="@id/confirmBookingForCustomer" />
-        <action
-            android:id="@+id/action_login_to_confirmBookingForCustomer2"
-            app:destination="@id/confirmBookingForCustomer" />
+            android:id="@+id/action_login_to_customerAddCardForPayment"
+            app:destination="@id/customerAddCardForPayment" />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
@@ -79,4 +76,8 @@
         android:name="com.example.carrentalranachrita.customerPolicyPage"
         android:label="activity_customer_policy_page"
         tools:layout="@layout/activity_customer_policy_page" />
+    <activity
+        android:id="@+id/customerAddCardForPayment"
+        android:name="com.example.carrentalranachrita.customerAddCardForPayment"
+        android:label="customerAddCardForPayment" />
 </navigation>
