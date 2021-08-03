@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/--Douglas-Summer2021/Software Engineering/RANACHRITA/car-rental-ranachrita/app/src/main/res/layout/fragment_add_car.xml" value="0.36666666666666664" />
         <entry key="..\:/--Douglas-Summer2021/Software Engineering/RANACHRITA/car-rental-ranachrita/app/src/main/res/layout/fragment_car_detail.xml" value="0.36666666666666664" />
         <entry key="..\:/--Douglas-Summer2021/Software Engineering/RANACHRITA/car-rental-ranachrita/app/src/main/res/layout/fragment_filter.xml" value="0.36666666666666664" />
+        <entry key="..\:/--Douglas-Summer2021/Software Engineering/RANACHRITA/car-rental-ranachrita/app/src/main/res/layout/fragment_host_add_car.xml" value="0.36666666666666664" />
+        <entry key="..\:/--Douglas-Summer2021/Software Engineering/RANACHRITA/car-rental-ranachrita/app/src/main/res/layout/fragment_login.xml" value="0.36666666666666664" />
         <entry key="..\:/--Douglas-Summer2021/Software Engineering/RANACHRITA/car-rental-ranachrita/app/src/main/res/layout/fragment_registration.xml" value="0.36666666666666664" />
       </map>
     </option>

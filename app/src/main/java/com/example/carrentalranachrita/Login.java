@@ -63,6 +63,16 @@ public class Login extends Fragment {
         login.setOnClickListener(v -> {
             String user = userEdit.getText().toString();
             String password = passwordEdit.getText().toString();
+            if(user.isEmpty()){
+                userEdit.setError("Please Enter Email.");
+                Toast.makeText(view.getContext(), "Please Enter Email", Toast.LENGTH_LONG ).show();
+                return;
+            }
+            if(password.isEmpty()){
+                passwordEdit.setError("Please Enter Password.");
+                Toast.makeText(view.getContext(), "Please Enter Password", Toast.LENGTH_LONG ).show();
+                return;
+            }
             mAuth.signInWithEmailAndPassword(user, password)
                     .addOnCompleteListener((Activity) view.getContext(), new OnCompleteListener<AuthResult>() {
                         @Override
@@ -78,7 +88,7 @@ public class Login extends Fragment {
                                 // findNavController(view).navigate(R.id.confirmBookingForCustomer);
                                 Snackbar.make(view, "Welcome", Snackbar.LENGTH_LONG).show();
                             }else {
-                                Snackbar.make(view, "Something wrong is happening, please try again", Snackbar.LENGTH_LONG).show();
+                                Snackbar.make(view, "Email or Password is not correct.", Snackbar.LENGTH_LONG).show();
                             }
                         }
                     });

@@ -20,15 +20,11 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Ranachrita"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/titleLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:gravity="center"
-            android:text="Login" />
+            android:textAllCaps="true"
+            android:textColor="#673AB7"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
 
         <EditText
             android:id="@+id/txtUser"
@@ -36,8 +32,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="10sp"
             android:ems="10"
-            android:hint="Email user"
-            android:inputType="textPersonName" />
+            android:hint="Enter your Email"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/txtUserPassword"
@@ -45,20 +42,34 @@
             android:layout_height="wrap_content"
             android:layout_margin="10sp"
             android:ems="10"
-            android:hint="Password"
-            android:inputType="textPersonName|textPassword" />
+            android:hint="Enter Password"
+            android:inputType="textPersonName|textPassword"
+            android:minHeight="48dp" />
 
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginBottom="20dp"
+            android:background="#009688"
+            android:text="Sing in"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textViewOr"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sing in" />
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Or" />
 
         <Button
             android:id="@+id/btnRegister"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sign up" />
+            android:layout_height="65dp"
+            android:background="#FFC107"
+            android:text="Sign up"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
