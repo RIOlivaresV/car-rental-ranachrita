@@ -2,6 +2,8 @@ package com.example.carrentalranachrita;
 
 import android.app.AlertDialog;
 import android.media.Image;
+import android.net.Uri;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,11 +16,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.carrentalranachrita.Daos.DaoCarImg;
 import com.example.carrentalranachrita.Entities.Car;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.StorageReference;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Locale;
@@ -72,6 +81,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder>{
         viewHolder.carFrom.setText(sdf.format(car.getFrom()));
         viewHolder.carTo.setText(sdf.format(car.getTo()));
         viewHolder.image.setClickable(true);
+        viewHolder.price.setText("$"+car.getPrice()+" per day");
         viewHolder.image.setOnClickListener(v -> {
             AlertDialog.Builder alertDialog = new AlertDialog.Builder(currentView.getContext());
             alertDialog.setTitle("Delete Car");
@@ -87,10 +97,35 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder>{
         if (car.isOwnerDriver()){
             viewHolder.carDriver.setText(driver);
         }else {
-            viewHolder.carDriver.setVisibility(View.INVISIBLE);
+            viewHolder.carDriver.setVisibility(View.GONE);
         }
         viewHolder.layout.setOnClickListener(v -> {
-            findNavController(currentView).navigate(R.id.carDetail);
+            Bundle arg = new Bundle();
+            arg.putString("carId", car.getId());
+            findNavController(currentView).navigate(R.id.carDetail, arg);
+        });
+
+        StorageReference imgRef = new DaoCarImg().SelectPiture(car.getHostId().replace("@", ""), car);
+
+        File localFile = null;
+        try {
+            localFile = File.createTempFile(String.valueOf(car.getCreatedDate().hashCode()), "jpg");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        File finalLocalFile = localFile;
+
+        imgRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                viewHolder.carPicture.setImageURI(Uri.fromFile(finalLocalFile));
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull @NotNull Exception e) {
+                Snackbar.make(currentView, "Something was wrong with your picture, refresh it.", Snackbar.LENGTH_LONG).show();
+            }
         });
     }
 
@@ -109,6 +144,8 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder>{
         LinearLayout layout;
         RatingBar ratingBar;
         ImageView image;
+        ImageView carPicture;
+        TextView price;
 
         public ViewHolder(View v) {
             super(v);
@@ -125,6 +162,8 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder>{
             layout = (LinearLayout) v.findViewById(R.id.carItemList);
             ratingBar = (RatingBar) v.findViewById(R.id.ratingBar);
             image = (ImageView) v.findViewById(R.id.btnDeleteCar);
+            price = (TextView) v.findViewById(R.id.pricetTextView);
+            carPicture = (ImageView) v.findViewById(R.id.carImageView);
         }
     }
 

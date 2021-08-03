@@ -6,11 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".CarDetail">
 
+    <ProgressBar
+        android:id="@+id/progressBarCarDetails"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"

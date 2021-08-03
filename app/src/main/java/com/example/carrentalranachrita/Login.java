@@ -1,6 +1,7 @@
 package com.example.carrentalranachrita;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -70,10 +71,10 @@ public class Login extends Fragment {
 //                                findNavController(view).navigate(R.id.carList);
                                 //to decide what is the home view depending of the rol
 //                                 findNavController(view).navigate(R.id.hostProfile);
-                                // findNavController(view).navigate(R.id.hostAddCar);
-                                // findNavController(view).navigate(R.id.hostProfile);
+                                 findNavController(view).navigate(R.id.hostAddCar);
+//                                 findNavController(view).navigate(R.id.hostProfile);
                                 // findNavController(view).navigate(R.id.showListOfCarsAddedByHost);
-                                findNavController(view).navigate(R.id.carList);
+//                                findNavController(view).navigate(R.id.carList);
                                 // findNavController(view).navigate(R.id.confirmBookingForCustomer);
                                 Snackbar.make(view, "Welcome", Snackbar.LENGTH_LONG).show();
                             }else {
