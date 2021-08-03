@@ -82,6 +82,7 @@ public class Login extends Fragment {
                                 //to decide what is the home view depending of the rol
 //                                 findNavController(view).navigate(R.id.hostProfile);
                                  findNavController(view).navigate(R.id.hostAddCar);
+                                //***findNavController(view).navigate(R.id.carList);
 //                                 findNavController(view).navigate(R.id.hostProfile);
                                 // findNavController(view).navigate(R.id.showListOfCarsAddedByHost);
 //                                findNavController(view).navigate(R.id.carList);
@@ -98,6 +99,7 @@ public class Login extends Fragment {
         Button register = view.findViewById(R.id.btnRegister);
         register.setOnClickListener(v -> {
             findNavController(view).navigate(R.id.registrationFragment);
+
         });
         return view;
     }

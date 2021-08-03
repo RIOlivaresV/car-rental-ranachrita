@@ -47,7 +47,8 @@
                 <RatingBar
                     android:id="@+id/ratingBar2"
                     android:layout_width="197dp"
-                    android:layout_height="41dp" />
+                    android:layout_height="41dp"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
                 <TextView
                     android:id="@+id/tripCountTextView"
@@ -94,7 +95,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:inputType="date" />
+                        android:inputType="date"
+                        android:minHeight="48dp"
+                        tools:ignore="SpeakableTextPresentCheck" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -114,7 +117,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:inputType="date" />
+                        android:inputType="date"
+                        android:minHeight="48dp"
+                        tools:ignore="SpeakableTextPresentCheck" />
                 </LinearLayout>
             </LinearLayout>
 
