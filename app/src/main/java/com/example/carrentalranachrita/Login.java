@@ -35,7 +35,7 @@ public class Login extends Fragment {
     public Login() {
         // Required empty public constructor
     }
-
+//
     // TODO: Rename and change types and number of parameters
     public static Login newInstance() {
         Login fragment = new Login();
