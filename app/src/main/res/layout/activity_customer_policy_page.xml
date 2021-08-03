@@ -109,11 +109,13 @@
         </androidx.cardview.widget.CardView>
 
         <Button
-            android:id="@+id/confirmPolicyBtn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="71dp"
             android:layout_margin="10dp"
-            android:text="Confirm" />
+            android:background="#009688"
+            android:text="Confirm"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
 
     </LinearLayout>
 

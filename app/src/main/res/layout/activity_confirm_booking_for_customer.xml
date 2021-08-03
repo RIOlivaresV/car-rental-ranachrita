@@ -31,11 +31,11 @@
 
         <Button
             android:id="@+id/CloseBtn"
-            android:layout_width="274dp"
-            android:layout_height="62dp"
+            android:layout_width="334dp"
+            android:layout_height="77dp"
             android:layout_gravity="center"
             android:layout_margin="20dp"
             android:text="@string/CloseBtn"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
     </LinearLayout>
 </FrameLayout>
