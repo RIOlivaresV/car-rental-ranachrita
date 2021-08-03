@@ -24,9 +24,9 @@ public class CarDao implements IDao<Car> {
     }
 
     @Override
-    public DatabaseReference Select(Car entity) {
+    public DatabaseReference Select(String id) {
         try {
-            return  UserReference;
+            return  UserReference.child(id);
         } catch (Exception e){
             return null;
         }

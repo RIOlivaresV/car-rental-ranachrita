@@ -1,6 +1,7 @@
 package com.example.carrentalranachrita.Entities;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -21,16 +22,38 @@ public class Car {
     private String Type;
     private Date From;
     private Date To;
+    private double Price;
+    private String Location;
     private ArrayList<Booking> Booking;
+    private Date CreatedDate;
 //
     public ArrayList<Booking> getBooking() {
         return Booking;
+    }
+
+    public Date getCreatedDate() {
+        return CreatedDate;
+    }
+
+    public String getLocation() {
+        return Location;
+    }
+
+    public void setLocation(String location) {
+        Location = location;
     }
 
     public void setBooking(ArrayList<Booking> booking) {
         Booking = booking;
     }
 
+    public double getPrice() {
+        return Price;
+    }
+
+    public void setPrice(double price) {
+        Price = price;
+    }
 
     public Car() {
         Id = "";
@@ -49,6 +72,7 @@ public class Car {
         Type = "";
         From = new Date();
         To = new Date();
+        CreatedDate = Calendar.getInstance().getTime();
     }
 
     public String getId() {
