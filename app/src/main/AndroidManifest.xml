@@ -17,11 +17,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".customerAddCardForPayment"></activity>
-        <activity android:name=".confirmBookingForCustomer" />
-        <activity android:name=".customerPolicyPage" />
-        <activity android:name=".showListOfCarsAddedByHost" />
-        <activity android:name=".showCarRequestForHost" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

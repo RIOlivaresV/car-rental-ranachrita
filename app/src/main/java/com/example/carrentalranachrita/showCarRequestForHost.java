@@ -1,47 +1,64 @@
 package com.example.carrentalranachrita;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
+public class showCarRequestForHost extends Fragment {
 
-public class showCarRequestForHost extends AppCompatActivity implements carRequestHostAdapter.ItemClickListener{
+    // TODO: Rename parameter arguments, choose names that match
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
 
-        Integer[] trip = {R.id.txtTripDetail,R.id.txtTripDetail,R.id.txtTripDetail};
-        carRequestHostAdapter adapter;
+    // TODO: Rename and change types of parameters
+    private String mParam1;
+    private String mParam2;
 
-@Override
-protected void onCreate(Bundle savedInstanceState) {
+    public showCarRequestForHost() {
+        // Required empty public constructor
+    }
+
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment showCarRequestForHost.
+     */
+    // TODO: Rename and change types and number of parameters
+    public static showCarRequestForHost newInstance(String param1, String param2) {
+        showCarRequestForHost fragment = new showCarRequestForHost();
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_show_car_request_for_host);
-
-        RecyclerView recyclerView = findViewById(R.id.recyclerViewHostCarRequest);
-/*   mRecyclerView = findViewById(R.id.recyclerView);
-        LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(MainActivity.this,LinearLayoutManager.VERTICAL, false);
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(MainActivity.this, DividerItemDecoration.VERTICAL));
-
-        mRecyclerView.setLayoutManager(mLinearLayoutManager);*/
-
-        //  recyclerView.addItemDecoration(new DividerItemDecoration(MainActivity.this,DividerItemDecoration.VERTICAL));
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        adapter = new carRequestHostAdapter(this,trip);
-        adapter.setClickListener(this);
-        recyclerView.setAdapter(adapter);
-
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
         }
+    }
 
-@Override
-public void onItemClick(View view, int position) {
-       // String name = getResources().getResourceEntryName(trip[position]);
-        Toast.makeText(getBaseContext(),"Selected" + (position + 1) + " " , Toast.LENGTH_LONG).show();
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_show_car_request_for_host, container, false);
+    }
 
-        }
+
+
 }
-
-
-
