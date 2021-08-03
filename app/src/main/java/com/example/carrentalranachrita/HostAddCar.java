@@ -99,6 +99,8 @@ public class HostAddCar extends Fragment {
         RadioButton radioManual = (RadioButton)view.findViewById(R.id.manualBtn);
         EditText priceInput = (EditText) view.findViewById(R.id.txtPrice);
         EditText locationInput = (EditText) view.findViewById(R.id.txtLocationHost);
+        EditText seatInput = (EditText) view.findViewById(R.id.txtSeat);
+        EditText doorInput = (EditText) view.findViewById(R.id.txtDoor);
 
         uploadInput.setOnClickListener(v -> {
             this.choosePhoto();
@@ -134,6 +136,8 @@ public class HostAddCar extends Fragment {
                 String color = colorInput.getText().toString();
                 String  odometer = odometerInput.getText().toString();
                 String  price = priceInput.getText().toString();
+                String seat = seatInput.getText().toString();
+                String door = doorInput.getText().toString();
 
                 if (yearInput == null){
                     ((TextView)yearInput.getSelectedView()).setError("Year is needed");
@@ -151,6 +155,16 @@ public class HostAddCar extends Fragment {
                 if(model.isEmpty()){
                     modelInput.setError("Model is required");
                     Toast.makeText(view.getContext(), "Model is required ", Toast.LENGTH_LONG ).show();
+                    return;
+                }
+                if(seat.isEmpty()){
+                    seatInput.setError("Seats number is required");
+                    Toast.makeText(view.getContext(), "Seats number is required ", Toast.LENGTH_LONG ).show();
+                    return;
+                }
+                if(door.isEmpty()){
+                    doorInput.setError("Doors number is required");
+                    Toast.makeText(view.getContext(), "Doors number is required ", Toast.LENGTH_LONG ).show();
                     return;
                 }
                 if(color.isEmpty()){
@@ -193,6 +207,8 @@ public class HostAddCar extends Fragment {
                 newCar.setDetails(carDetailInput.getText().toString());
                 newCar.setHostId(currentFirebaseUser.getEmail());
                 newCar.setImagen(convertLocalImgToFirebase(imgPath, newCar));
+                newCar.setModel(seatInput.getText().toString());
+                newCar.setModel(doorInput.getText().toString());
 //            newCar.setBooking(new ArrayList<Booking>());
 
                 CarDao dao = new CarDao();

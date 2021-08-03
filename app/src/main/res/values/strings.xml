@@ -145,4 +145,7 @@
     <string name="msgShowReqSuccess">Your Request has been registered successfully!!</string>
     <string name="txtMsgReqWillFinalized">Your request will be finalized after a short view. Please check your notifications.</string>
     <string name="CloseBtn">Close</string>
+    <string name="seat">Seats</string>
+    <string name="door">Doors</string>
+
 </resources>

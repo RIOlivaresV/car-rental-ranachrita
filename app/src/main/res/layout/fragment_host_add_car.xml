@@ -125,6 +125,58 @@
                     android:inputType="textPersonName" />
 
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/seat"
+                    android:layout_width="158dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="@string/seat"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/txtSeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Seats number"
+                    android:inputType="textPersonName" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/door"
+                    android:layout_width="158dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="@string/door"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/txtDoor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Doors number"
+                    android:inputType="textPersonName" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
