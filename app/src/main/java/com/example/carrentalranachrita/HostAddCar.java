@@ -207,8 +207,8 @@ public class HostAddCar extends Fragment {
                 newCar.setDetails(carDetailInput.getText().toString());
                 newCar.setHostId(currentFirebaseUser.getEmail());
                 newCar.setImagen(convertLocalImgToFirebase(imgPath, newCar));
-                newCar.setModel(seatInput.getText().toString());
-                newCar.setModel(doorInput.getText().toString());
+                newCar.setSeats(Integer.parseInt(seatInput.getText().toString()));
+                newCar.setDoors(Integer.parseInt(doorInput.getText().toString()));
 //            newCar.setBooking(new ArrayList<Booking>());
 
                 CarDao dao = new CarDao();
