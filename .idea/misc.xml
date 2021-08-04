@@ -4,7 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/chris/AndroidProject/car-rental-ranachrita/app/src/main/res/layout/activity_main.xml" value="0.2477355072463768" />
+        <entry key="..\:/Users/chris/AndroidProject/car-rental-ranachrita/app/src/main/res/layout/carbox_layout.xml" value="0.4" />
+        <entry key="..\:/Users/chris/AndroidProject/car-rental-ranachrita/app/src/main/res/layout/fragment_car_detail.xml" value="0.159375" />
+        <entry key="..\:/Users/chris/AndroidProject/car-rental-ranachrita/app/src/main/res/layout/fragment_car_list.xml" value="0.159375" />
+        <entry key="..\:/Users/chris/AndroidProject/car-rental-ranachrita/app/src/main/res/layout/fragment_confirm_booking_for_customer.xml" value="0.159375" />
+        <entry key="..\:/Users/chris/AndroidProject/car-rental-ranachrita/app/src/main/res/layout/fragment_host_profile.xml" value="0.29737609329446063" />
         <entry key="..\:/Users/chris/AndroidProject/car-rental-ranachrita/app/src/main/res/layout/fragment_login.xml" value="0.2477355072463768" />
+        <entry key="..\:/Users/chris/AndroidProject/car-rental-ranachrita/app/src/main/res/layout/fragment_show_car_request_for_host.xml" value="0.159375" />
+        <entry key="..\:/Users/chris/AndroidProject/car-rental-ranachrita/app/src/main/res/layout/recyclerview_host_requests.xml" value="0.159375" />
       </map>
     </option>
   </component>

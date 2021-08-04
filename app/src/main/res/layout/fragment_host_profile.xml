@@ -39,6 +39,13 @@
                 android:text="@string/hostFirstName"
                 android:textSize="25dp" />
 
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                android:onClick="logout"/>
+
             <TextView
                 android:id="@+id/txtHostFirstName"
                 android:layout_width="match_parent"
@@ -137,9 +144,10 @@
             <Button
                 android:id="@+id/button"
                 android:layout_width="150dp"
-                android:layout_height="wrap_content"
+                android:layout_height="58dp"
                 android:layout_margin="10dp"
                 android:gravity="center"
+                android:onClick="logout"
                 android:text="Button"
                 android:textSize="15dp" />
 

@@ -15,6 +15,14 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Host_Activity extends AppCompatActivity {
 
+    public void logout()
+    {
+        Intent i = new Intent(Host_Activity.this,MainActivity.class);
+        startActivity(i);
+
+    }
+
+
 
 
 
@@ -24,6 +32,7 @@ public class Host_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_host);
 
         BottomNavigationView navView = findViewById(R.id.bottomNav_view_host);
+
 
 
 
@@ -39,4 +48,6 @@ public class Host_Activity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
     }
+
+
 }
