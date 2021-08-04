@@ -15,6 +15,7 @@ public class splashActvity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_actvity);
 
+        //This is the Splash activity class
 
         TimerTask task = new TimerTask() {
             @Override
