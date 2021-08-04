@@ -127,6 +127,9 @@ public class RegistrationFragment extends Fragment {
                                    UserDao dao = new UserDao();
                                    Boolean isSuccess = dao.Insert(user);
                                    if (isSuccess){
+
+
+
                                        findNavController(view).navigate(R.id.backLogin);
                                        Toast.makeText(view.getContext(), "User created", Toast.LENGTH_LONG ).show();
                                    }

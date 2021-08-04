@@ -50,4 +50,5 @@ public class UserDao implements IDao<User>{
     public boolean Delete(User entity) {
         return false;
     }
+
 }

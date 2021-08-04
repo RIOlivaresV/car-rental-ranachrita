@@ -19,7 +19,7 @@
             android:id="@+id/backLogin"
             app:destination="@id/login" />
     </fragment>
-    <fragment
+   <!-- <fragment
         android:id="@+id/carList"
         android:name="com.example.carrentalranachrita.CarList"
         android:label="fragment_car_list"
@@ -27,7 +27,7 @@
         <action
             android:id="@+id/action_carList_to_filterFragment"
             app:destination="@id/filterFragment" />
-    </fragment>
+    </fragment>-->
     <fragment
         android:id="@+id/filterFragment"
         android:name="com.example.carrentalranachrita.FilterFragment"
@@ -55,11 +55,11 @@
         android:label="fragment_host_profile"
         tools:layout="@layout/fragment_host_profile" />
 
-    <activity
+   <!-- <activity
         android:id="@+id/showCarRequestForHost"
         android:name="com.example.carrentalranachrita.showCarRequestForHost"
         android:label="activity_show_car_request_for_host"
-        tools:layout="@layout/activity_show_car_request_for_host" />
+        tools:layout="@layout/activity_show_car_request_for_host" />-->
     <activity
         android:id="@+id/showListOfCarsAddedByHost"
         android:name="com.example.carrentalranachrita.showListOfCarsAddedByHost"
