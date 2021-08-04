@@ -156,4 +156,7 @@
     <string name="editTxtExpirationDate">Month/Year</string>
     <string name="editTxtCVC">Enter CVC</string>
     <string name="btnPayThePayment">ADD</string>
+    <string name="seat">Seats</string>
+    <string name="door">Doors</string>
+
 </resources>

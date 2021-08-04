@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.carrentalranachrita.Daos.CarDao;
 import com.example.carrentalranachrita.Daos.DaoCarImg;
@@ -87,6 +88,7 @@ public class CarDetail extends Fragment {
         CheckBox checkboxInput = view.findViewById(R.id.needDrivercheckBox);
         TextView ownerInput = view.findViewById(R.id.hostNameValueTextView);
         Button Submit = view.findViewById(R.id.bookButton);
+        Button insurance =view.findViewById(R.id.addInsuranceButton);
         Button checkAvialability = view.findViewById(R.id.checkAvailabilityButton);
         TextView priceInput = view.findViewById(R.id.priceValueTextView);
         ProgressBar progressBar = view.findViewById(R.id.progressBarCarDetails);
@@ -156,10 +158,14 @@ public class CarDetail extends Fragment {
                 refoundDate.add(Calendar.DATE, -1);
                 refoundInput.setText("Full refund before "+sdf.format(refoundDate.getTime()));
                 checkboxInput.setChecked(car.isOwnerDriver());
-                priceInput.setText("$"+car.getPrice());
+                priceInput.setText("$"+car.getPrice() + " CAD - Per Night");
                 ownerInput.setText(car.getHostId());
                 checkAvialability.setOnClickListener(v -> {
-                    Snackbar.make(view, "You click me", Snackbar.LENGTH_LONG).show();
+
+                    Snackbar.make(view, "Awesome! Car is available in this period. ", Snackbar.LENGTH_LONG).show();
+                });
+                insurance.setOnClickListener(v ->{
+
                 });
                 StorageReference imgRef = new DaoCarImg().SelectPiture(car.getHostId().replace("@", ""), car);
 

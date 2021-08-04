@@ -27,7 +27,7 @@
 
                 <TextView
                     android:id="@+id/location"
-                    android:layout_width="wrap_content"
+                    android:layout_width="152dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
@@ -53,7 +53,7 @@
 
                 <TextView
                     android:id="@+id/year"
-                    android:layout_width="168dp"
+                    android:layout_width="161dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
@@ -64,10 +64,11 @@
 
                 <Spinner
                     android:id="@+id/spinnerYear"
-                    android:layout_width="300dp"
+                    android:layout_width="212dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
             </LinearLayout>
 
@@ -78,7 +79,7 @@
 
                 <TextView
                     android:id="@+id/make"
-                    android:layout_width="wrap_content"
+                    android:layout_width="158dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
@@ -105,7 +106,7 @@
 
                 <TextView
                     android:id="@+id/model"
-                    android:layout_width="wrap_content"
+                    android:layout_width="158dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
@@ -124,6 +125,58 @@
                     android:inputType="textPersonName" />
 
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/seat"
+                    android:layout_width="158dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="@string/seat"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/txtSeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Seats number"
+                    android:inputType="textPersonName" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/door"
+                    android:layout_width="158dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="@string/door"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/txtDoor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Doors number"
+                    android:inputType="textPersonName" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -132,7 +185,7 @@
 
                 <TextView
                     android:id="@+id/color"
-                    android:layout_width="wrap_content"
+                    android:layout_width="158dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
@@ -158,7 +211,7 @@
 
                 <TextView
                     android:id="@+id/odometer"
-                    android:layout_width="wrap_content"
+                    android:layout_width="143dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
@@ -185,7 +238,7 @@
 
                 <TextView
                     android:id="@+id/Transmission"
-                    android:layout_width="wrap_content"
+                    android:layout_width="145dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
@@ -204,18 +257,23 @@
                         android:id="@+id/trasmissionRadio"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:gravity="center"
                         android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/automaticBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginRight="20dp"
+                            android:minHeight="48dp"
                             android:text="@string/automaticBtn" />
 
                         <RadioButton
                             android:id="@+id/manualBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:minHeight="48dp"
                             android:text="@string/manualBtn" />
                     </RadioGroup>
 
@@ -230,7 +288,7 @@
 
                 <TextView
                     android:id="@+id/uploadImage"
-                    android:layout_width="wrap_content"
+                    android:layout_width="113dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
@@ -250,7 +308,7 @@
 
                 <ImageView
                     android:id="@+id/uploadBtn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="8dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
@@ -266,7 +324,7 @@
 
                 <TextView
                     android:id="@+id/carAvailability"
-                    android:layout_width="wrap_content"
+                    android:layout_width="159dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
@@ -293,7 +351,7 @@
 
                 <TextView
                     android:id="@+id/carDetail"
-                    android:layout_width="wrap_content"
+                    android:layout_width="159dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
@@ -318,6 +376,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 android:text="@string/driverAvailableBtn"
                 android:textSize="20dp" />
 
@@ -327,6 +387,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 android:text="@string/insuranceBtn"
                 android:textSize="20dp" />
 
@@ -337,7 +399,7 @@
 
                 <TextView
                     android:id="@+id/txtLabelPrice"
-                    android:layout_width="wrap_content"
+                    android:layout_width="169dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="20sp"
                     android:layout_marginLeft="20sp"
@@ -359,9 +421,11 @@
 
             <Button
                 android:id="@+id/addCarBtn"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="#009688"
                 android:gravity="center"
                 android:text="Add Car"
                 android:textSize="20dp" />

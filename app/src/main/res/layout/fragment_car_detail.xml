@@ -47,7 +47,8 @@
                 <RatingBar
                     android:id="@+id/ratingBar2"
                     android:layout_width="197dp"
-                    android:layout_height="41dp" />
+                    android:layout_height="41dp"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
                 <TextView
                     android:id="@+id/tripCountTextView"
@@ -94,7 +95,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:inputType="date" />
+                        android:inputType="date"
+                        android:minHeight="48dp"
+                        tools:ignore="SpeakableTextPresentCheck" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -114,7 +117,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:inputType="date" />
+                        android:inputType="date"
+                        android:minHeight="48dp"
+                        tools:ignore="SpeakableTextPresentCheck" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -283,8 +288,11 @@
 
             <TextView
                 android:id="@+id/priceValueTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="102dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_weight="1"
                 android:text="$150 CAD"
                 android:textSize="24sp" />

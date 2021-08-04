@@ -62,15 +62,33 @@ public class Login extends Fragment {
         login.setOnClickListener(v -> {
             String user = userEdit.getText().toString();
             String password = passwordEdit.getText().toString();
+            if(user.isEmpty()){
+                userEdit.setError("Please Enter Email.");
+                Toast.makeText(view.getContext(), "Please Enter Email", Toast.LENGTH_LONG ).show();
+                return;
+            }
+            if(password.isEmpty()){
+                passwordEdit.setError("Please Enter Password.");
+                Toast.makeText(view.getContext(), "Please Enter Password", Toast.LENGTH_LONG ).show();
+                return;
+            }
             mAuth.signInWithEmailAndPassword(user, password)
                     .addOnCompleteListener((Activity) view.getContext(), new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
-                                findNavController(view).navigate(R.id.showListOfCarsAddedByHost);
+//                                findNavController(view).navigate(R.id.carList);
+                                //to decide what is the home view depending of the rol
+//                                 findNavController(view).navigate(R.id.hostProfile);
+                                 findNavController(view).navigate(R.id.hostAddCar);
+                                //***findNavController(view).navigate(R.id.carList);
+//                                 findNavController(view).navigate(R.id.hostProfile);
+                                // findNavController(view).navigate(R.id.showListOfCarsAddedByHost);
+//                                findNavController(view).navigate(R.id.carList);
+                                // findNavController(view).navigate(R.id.confirmBookingForCustomer);
                                 Snackbar.make(view, "Welcome", Snackbar.LENGTH_LONG).show();
                             }else {
-                                Snackbar.make(view, "Something wrong is happening, please try again", Snackbar.LENGTH_LONG).show();
+                                Snackbar.make(view, "Email or Password is not correct.", Snackbar.LENGTH_LONG).show();
                             }
                         }
                     });
@@ -79,6 +97,10 @@ public class Login extends Fragment {
 
         Button register = view.findViewById(R.id.btnRegister);
       
+        register.setOnClickListener(v -> {
+            findNavController(view).navigate(R.id.registrationFragment);
+
+        });
         return view;
     }
 

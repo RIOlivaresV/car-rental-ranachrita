@@ -98,6 +98,9 @@ public class HostAddCar extends Fragment {
         RadioButton radioAuto = (RadioButton)view.findViewById(R.id.automaticBtn);
         RadioButton radioManual = (RadioButton)view.findViewById(R.id.manualBtn);
         EditText priceInput = (EditText) view.findViewById(R.id.txtPrice);
+        EditText locationInput = (EditText) view.findViewById(R.id.txtLocationHost);
+        EditText seatInput = (EditText) view.findViewById(R.id.txtSeat);
+        EditText doorInput = (EditText) view.findViewById(R.id.txtDoor);
 
         uploadInput.setOnClickListener(v -> {
             this.choosePhoto();
@@ -126,52 +129,102 @@ public class HostAddCar extends Fragment {
         });
         addCarButton.setOnClickListener(v -> {
             Car newCar = new Car();
+            try{
+                String location = locationInput.getText().toString();
+                String brand = brandInput.getText().toString();
+                String model = modelInput.getText().toString();
+                String color = colorInput.getText().toString();
+                String  odometer = odometerInput.getText().toString();
+                String  price = priceInput.getText().toString();
+                String seat = seatInput.getText().toString();
+                String door = doorInput.getText().toString();
 
-            if (!radioAuto.isChecked()){
-                if (!radioManual.isChecked()){
-                    radioManual.setError("Please, select one transmission");
-                }else {
-                    newCar.setTransmission("Manual");
+                if (yearInput == null){
+                    ((TextView)yearInput.getSelectedView()).setError("Year is needed");
                 }
-            }else{
-                newCar.setTransmission("Automatic");
-            }
-            if (modelInput == null){
-                modelInput.setError("Please, select a model");
-            }
-            if (brandInput.getText().toString().isEmpty()){
-                ((TextView)brandInput).setError("Please, select a brand");
-            }
-            if (yearInput == null){
-                ((TextView)yearInput.getSelectedView()).setError("Year is needed");
-            }
-            if (colorInput.getText().toString().isEmpty()){
-                colorInput.setError("Color is needed");
-            }
-            if (odometerInput == null){
-                odometerInput.setError("Odometer is needed");
-            }
+                if(location.isEmpty()){
+                    locationInput.setError("Location is required");
+                    Toast.makeText(view.getContext(), "Location is required ", Toast.LENGTH_LONG ).show();
+                    return;
+                }
+                if(brand.isEmpty()){
+                    brandInput.setError("Brand is required");
+                    Toast.makeText(view.getContext(), "Brand is required ", Toast.LENGTH_LONG ).show();
+                    return;
+                }
+                if(model.isEmpty()){
+                    modelInput.setError("Model is required");
+                    Toast.makeText(view.getContext(), "Model is required ", Toast.LENGTH_LONG ).show();
+                    return;
+                }
+                if(seat.isEmpty()){
+                    seatInput.setError("Seats number is required");
+                    Toast.makeText(view.getContext(), "Seats number is required ", Toast.LENGTH_LONG ).show();
+                    return;
+                }
+                if(door.isEmpty()){
+                    doorInput.setError("Doors number is required");
+                    Toast.makeText(view.getContext(), "Doors number is required ", Toast.LENGTH_LONG ).show();
+                    return;
+                }
+                if(color.isEmpty()){
+                    colorInput.setError("Color is required");
+                    Toast.makeText(view.getContext(), "Color is required ", Toast.LENGTH_LONG ).show();
+                    return;
+                }
+                if (odometer.isEmpty()){
+                    odometerInput.setError("Odometer is required");
+                    Toast.makeText(view.getContext(), "Odometer is required", Toast.LENGTH_LONG ).show();
+                    return;
+                }
+                if (!radioManual.isChecked() && !radioAuto.isChecked()){
+                    radioManual.setError("Select transmission");
+                    Toast.makeText(view.getContext(), "Select transmission ", Toast.LENGTH_LONG ).show();
+                    if (radioManual.isChecked()){
+                        newCar.setTransmission("Manual");
+                    }else {
+                        newCar.setTransmission("Automatic");
+                    }
+                    return;
+                }
+                if(price.isEmpty()){
+                    priceInput.setError("Price is required");
+                    Toast.makeText(view.getContext(), "Price is required", Toast.LENGTH_LONG ).show();
+                    return;
+                }
 
-            FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
+                FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
 
-            newCar.setYear(Integer.parseInt(yearInput.getSelectedItem().toString()));
-            newCar.setBrand(brandInput.getText().toString());
-            newCar.setModel(modelInput.getText().toString());
-            newCar.setColor(colorInput.getText().toString());
-            newCar.setOdometer(odometerInput.getText().toString());
-            newCar.setFrom(avialabilityFrom.getTime());
-            newCar.setTo(avialibilityTo.getTime());
-            newCar.setOwnerDriver(ownerAsDriverInput.isChecked());
-            newCar.setPrice(Double.parseDouble(priceInput.getText().toString()));
-            newCar.setDetails(carDetailInput.getText().toString());
-            newCar.setHostId(currentFirebaseUser.getEmail());
-            newCar.setImagen(convertLocalImgToFirebase(imgPath, newCar));
+                newCar.setYear(Integer.parseInt(yearInput.getSelectedItem().toString()));
+                newCar.setBrand(brandInput.getText().toString());
+                newCar.setModel(modelInput.getText().toString());
+                newCar.setColor(colorInput.getText().toString());
+                newCar.setOdometer(odometerInput.getText().toString());
+                newCar.setFrom(avialabilityFrom.getTime());
+                newCar.setTo(avialibilityTo.getTime());
+                newCar.setOwnerDriver(ownerAsDriverInput.isChecked());
+                newCar.setPrice(Double.parseDouble(priceInput.getText().toString()));
+                newCar.setDetails(carDetailInput.getText().toString());
+                newCar.setHostId(currentFirebaseUser.getEmail());
+                newCar.setImagen(convertLocalImgToFirebase(imgPath, newCar));
+                newCar.setSeats(Integer.parseInt(seatInput.getText().toString()));
+                newCar.setDoors(Integer.parseInt(doorInput.getText().toString()));
 //            newCar.setBooking(new ArrayList<Booking>());
 
-            CarDao dao = new CarDao();
-            dao.Insert(newCar);
-            Snackbar.make(view, "Your cars was added.", Snackbar.LENGTH_LONG);
-            findNavController(view).navigate(R.id.carList);
+                CarDao dao = new CarDao();
+                dao.Insert(newCar);
+                Snackbar.make(view, "Your cars was added.", Snackbar.LENGTH_LONG);
+                findNavController(view).navigate(R.id.carList);
+            }
+            catch (Exception e){
+                Toast.makeText(view.getContext(), e.getMessage().toString(), Toast.LENGTH_LONG).show();
+            }
+
+
+
+
+
+
         });
         return view;
     }
