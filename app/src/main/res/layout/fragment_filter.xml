@@ -18,15 +18,18 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#D8D8D8"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/colorTextView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_height="38dp"
+                    android:background="#4F009688"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
                     android:text="Color:"
+                    android:textColor="#004740"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -38,7 +41,7 @@
                     <CheckBox
                         android:id="@+id/whiteCheckBox"
                         android:layout_width="148dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:layout_marginEnd="10dp"
                         android:layout_marginRight="10dp"
                         android:text="White" />
@@ -46,7 +49,7 @@
                     <CheckBox
                         android:id="@+id/redCheckBox"
                         android:layout_width="102dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:layout_marginEnd="10dp"
                         android:layout_marginRight="10dp"
                         android:text="Red" />
@@ -54,7 +57,7 @@
                     <CheckBox
                         android:id="@+id/blackCheckBox"
                         android:layout_width="140dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:text="Black" />
 
                 </LinearLayout>
@@ -67,21 +70,21 @@
                     <CheckBox
                         android:id="@+id/grayCheckBox"
                         android:layout_width="97dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:layout_weight="1"
                         android:text="Gray" />
 
                     <CheckBox
                         android:id="@+id/beigeCheckBox"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:layout_weight="1"
                         android:text="Beige" />
 
                     <CheckBox
                         android:id="@+id/blueCheckBox"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:layout_weight="1"
                         android:text="Blue" />
 
@@ -96,7 +99,7 @@
                     <CheckBox
                         android:id="@+id/yellowCheckBox"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:layout_weight="1"
                         android:text="Yellow" />
                 </LinearLayout>
@@ -117,10 +120,12 @@
                 <TextView
                     android:id="@+id/dailyPriceTextView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_height="38dp"
+                    android:background="#4F009688"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
                     android:text="Daily Price:"
+                    android:textColor="#004740"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -129,30 +134,35 @@
                 android:id="@+id/price1CheckBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:minHeight="48dp"
                 android:text="Under $50 CAD" />
 
             <CheckBox
                 android:id="@+id/price2CheckBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:minHeight="48dp"
                 android:text="$51 CAD - $100 CAD" />
 
             <CheckBox
                 android:id="@+id/price3CheckBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:minHeight="48dp"
                 android:text="$101 CAD - $200 CAD" />
 
             <CheckBox
                 android:id="@+id/price4CheckBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:minHeight="48dp"
                 android:text="$201 CAD - $300 CAD" />
 
             <CheckBox
                 android:id="@+id/price5CheckBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:minHeight="48dp"
                 android:text="Above $300 CAD" />
 
             <View
@@ -165,31 +175,39 @@
                 android:id="@+id/rateTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:height="38dp"
+                android:background="#4F009688"
+                android:gravity="center|left"
                 android:paddingLeft="5dp"
                 android:text="Rate:"
+                android:textColor="#004740"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="#D8D8D8">
 
                 <RadioButton
                     android:id="@+id/rate1RadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:minHeight="48dp"
                     android:text="3 Stars" />
 
                 <RadioButton
                     android:id="@+id/rate2RadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:minHeight="48dp"
                     android:text="4 Stars" />
 
                 <RadioButton
                     android:id="@+id/rate3RadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:minHeight="48dp"
                     android:text="5 Stars" />
             </RadioGroup>
 
@@ -197,16 +215,21 @@
                 android:id="@+id/availabilityTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
+                android:height="38dp"
+                android:background="#4F009688"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
                 android:text="Availability"
+                android:textColor="#004740"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
 
                 <EditText
                     android:id="@+id/startEditTextDate"
@@ -217,7 +240,8 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="Start Date"
-                    android:inputType="date" />
+                    android:inputType="date"
+                    android:minHeight="48dp" />
 
                 <EditText
                     android:id="@+id/endEditTextDate"
@@ -228,14 +252,17 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="End Date"
-                    android:inputType="date" />
+                    android:inputType="date"
+                    android:minHeight="48dp" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/applyFilterButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Apply" />
+                android:layout_height="59dp"
+                android:background="#FF9800"
+                android:text="Apply"
+                android:textSize="20sp" />
 
         </LinearLayout>
     </ScrollView>

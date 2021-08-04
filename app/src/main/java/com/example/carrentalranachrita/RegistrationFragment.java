@@ -25,6 +25,9 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import static androidx.navigation.Navigation.findNavController;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class RegistrationFragment extends Fragment {
 
 
@@ -63,7 +66,10 @@ public class RegistrationFragment extends Fragment {
         EditText passwordEdit = (EditText) view.findViewById(R.id.txtUserPassword);
         EditText confirmPasswordEdit = (EditText) view.findViewById(R.id.txtConfirmPassword);
         Button signUp = (Button) view.findViewById(R.id.btnSignUp);
-        RadioGroup radioGroup = (RadioGroup) view.findViewById(R.id.radioButtonRol);
+        RadioGroup radioGroup = (RadioGroup) view.findViewById(R.id.radioButtonRole);
+        RadioButton radioButtonCustomer = (RadioButton) view.findViewById(R.id.radioButtonCustomer);
+        RadioButton radioButtonHost = (RadioButton) view.findViewById(R.id.radioButtonHost);
+
 
 
         signUp.setOnClickListener(v -> {
@@ -79,44 +85,76 @@ public class RegistrationFragment extends Fragment {
                String phoneNummber = phoneNumberEdit.getText().toString();
                String password = passwordEdit.getText().toString();
                String confirmPassword = confirmPasswordEdit.getText().toString();
-               String rol = r.getText().toString();
+               //String rol = r.getText().toString();
+
+               // get selected radio button from radioGroup
+               String rol = String.valueOf(radioGroup.getCheckedRadioButtonId());
 
 
                if (name.isEmpty()){
                    nameEdit.setError("Name is required");
+                   Toast.makeText(view.getContext(), "Name is required ", Toast.LENGTH_LONG ).show();
                    return;
                }
 
                if (lastName.isEmpty()){
                    lastNameEdit.setError("Last name is required");
+                   Toast.makeText(view.getContext(), "Last name is required ", Toast.LENGTH_LONG ).show();
                    return;
                }
 
                if (email.isEmpty()){
                    emailEdit.setError("Email is required");
+                   Toast.makeText(view.getContext(), "Email is required ", Toast.LENGTH_LONG ).show();
+                   return;
+               }
+               else if(!isEmailValid(email)){
+                   emailEdit.setError("Email is not in correct format");
+                   Toast.makeText(view.getContext(), "Email is not in correct format ", Toast.LENGTH_LONG ).show();
                    return;
                }
 
-               if (phoneNummber.isEmpty()){
+               if (phoneNummber.isEmpty()) {
                    phoneNumberEdit.setError("Phone number is required");
+                   Toast.makeText(view.getContext(), "Phone number is required ", Toast.LENGTH_LONG).show();
+                   return;
+               }
+               else if(phoneNummber.length() != 10 ){
+                   phoneNumberEdit.setError("Phone number is not correct");
+                   Toast.makeText(view.getContext(), "Phone number is not correct ", Toast.LENGTH_LONG ).show();
                    return;
                }
 
+               if(!radioButtonCustomer.isChecked() && !radioButtonHost.isChecked() ){
+                   radioButtonCustomer.setError("Role is required");
+                   Toast.makeText(view.getContext(), "Select Role is required ", Toast.LENGTH_LONG ).show();
+                   return;
+               }
                if (radioButtomId == 0){
                    int lastChildPos=radioGroup.getChildCount()-1;
-                   ((RadioButton)radioGroup.getChildAt(lastChildPos)).setError("Rol is required");
+                   ((RadioButton)radioGroup.getChildAt(lastChildPos)).setError("Role is required");
+                   Toast.makeText(view.getContext(), "Select Role is required ", Toast.LENGTH_LONG ).show();
                    return;
                }
 
                if (password.isEmpty()){
-                   passwordEdit.setError("Name is required");
+                   passwordEdit.setError("Password is required");
+                   Toast.makeText(view.getContext(), "Password is required ", Toast.LENGTH_LONG ).show();
                    return;
-               } else{
+               }
+               else if(password.length()<8){
+                   passwordEdit.setError("Password must be at least 8 Characters");
+                   Toast.makeText(view.getContext(), "Password must be at least 8 Characters ", Toast.LENGTH_LONG ).show();
+                   return;
+               }
+
                    if (!password.equals(confirmPassword)){
                        confirmPasswordEdit.setError("Password does not match");
+                       Toast.makeText(view.getContext(), "Password does not match ", Toast.LENGTH_LONG ).show();
                        return;
                    }
-               }
+
+
 
                User user = new User(name, lastName,email, phoneNummber, password, rol );
                mAuth.createUserWithEmailAndPassword(email, password)
@@ -152,5 +190,11 @@ public class RegistrationFragment extends Fragment {
     public void onResume() {
         super.onResume();
         progress.setVisibility(View.GONE);
+    }
+    public static boolean isEmailValid(String email) {
+        String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
+        Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
     }
 }

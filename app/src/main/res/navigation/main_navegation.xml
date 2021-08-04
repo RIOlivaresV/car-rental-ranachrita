@@ -9,7 +9,11 @@
         android:id="@+id/login"
         android:name="com.example.carrentalranachrita.Login"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_showListOfCarsAddedByHost"
+            app:destination="@id/showListOfCarsAddedByHost" />
+    </fragment>
     <fragment
         android:id="@+id/registrationFragment"
         android:name="com.example.carrentalranachrita.RegistrationFragment"
@@ -28,21 +32,8 @@
             android:id="@+id/action_carList_to_filterFragment"
             app:destination="@id/filterFragment" />
     </fragment>-->
-    <fragment
-        android:id="@+id/filterFragment"
-        android:name="com.example.carrentalranachrita.FilterFragment"
-        android:label="fragment_filter"
-        tools:layout="@layout/fragment_filter" />
-    <fragment
-        android:id="@+id/carDetail"
-        android:name="com.example.carrentalranachrita.CarDetail"
-        android:label="fragment_car_detail"
-        tools:layout="@layout/fragment_car_detail" />
-    <fragment
-        android:id="@+id/carListFragment"
-        android:name="com.example.carrentalranachrita.CarList"
-        android:label="fragment_car_list"
-        tools:layout="@layout/fragment_car_list" />
+
+
     <fragment
         android:id="@+id/hostAddCar"
         android:name="com.example.carrentalranachrita.HostAddCar"
@@ -55,24 +46,49 @@
         android:label="fragment_host_profile"
         tools:layout="@layout/fragment_host_profile" />
 
-   <!-- <activity
-        android:id="@+id/showCarRequestForHost"
-        android:name="com.example.carrentalranachrita.showCarRequestForHost"
-        android:label="activity_show_car_request_for_host"
-        tools:layout="@layout/activity_show_car_request_for_host" />-->
-    <activity
-        android:id="@+id/showListOfCarsAddedByHost"
-        android:name="com.example.carrentalranachrita.showListOfCarsAddedByHost"
-        android:label="activity_show_list_of_cars_added_by_host"
-        tools:layout="@layout/activity_show_list_of_cars_added_by_host" />
-    <activity
+    <fragment
+        android:id="@+id/addCarFragment"
+        android:name="com.example.carrentalranachrita.AddCarFragment"
+        android:label="fragment_add_car"
+        tools:layout="@layout/fragment_add_car" />
+    <fragment
+        android:id="@+id/carList"
+        android:name="com.example.carrentalranachrita.CarList"
+        android:label="fragment_car_list"
+        tools:layout="@layout/fragment_car_list" />
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.example.carrentalranachrita.FilterFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" />
+    <fragment
+        android:id="@+id/carDetail2"
+        android:name="com.example.carrentalranachrita.CarDetail"
+        android:label="fragment_car_detail"
+        tools:layout="@layout/fragment_car_detail" />
+    <fragment
         android:id="@+id/confirmBookingForCustomer"
         android:name="com.example.carrentalranachrita.confirmBookingForCustomer"
-        android:label="activity_confirm_booking_for_customer"
-        tools:layout="@layout/activity_confirm_booking_for_customer" />
-    <activity
+        android:label="fragment_confirm_booking_for_customer"
+        tools:layout="@layout/fragment_confirm_booking_for_customer" />
+    <fragment
+        android:id="@+id/customerAddCardForPayment"
+        android:name="com.example.carrentalranachrita.customerAddCardForPayment"
+        android:label="fragment_customer_add_card_for_payment"
+        tools:layout="@layout/fragment_customer_add_card_for_payment" />
+    <fragment
         android:id="@+id/customerPolicyPage"
         android:name="com.example.carrentalranachrita.customerPolicyPage"
-        android:label="activity_customer_policy_page"
-        tools:layout="@layout/activity_customer_policy_page" />
+        android:label="fragment_customer_policy_page"
+        tools:layout="@layout/fragment_customer_policy_page" />
+    <fragment
+        android:id="@+id/showCarRequestForHost"
+        android:name="com.example.carrentalranachrita.showCarRequestForHost"
+        android:label="fragment_show_car_request_for_host"
+        tools:layout="@layout/fragment_show_car_request_for_host" />
+    <fragment
+        android:id="@+id/showListOfCarsAddedByHost"
+        android:name="com.example.carrentalranachrita.showListOfCarsAddedByHost"
+        android:label="fragment_show_list_of_cars_added_by_host"
+        tools:layout="@layout/fragment_show_list_of_cars_added_by_host" />
 </navigation>

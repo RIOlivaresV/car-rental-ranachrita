@@ -58,6 +58,10 @@ public class CarList extends Fragment{
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.carListRecycleView);
         ProgressBar progressBar = view.findViewById(R.id.progressBarCarList);
         EditText search = (EditText) view.findViewById(R.id.searchEditText);
+        ImageView filterimg = (ImageView) view.findViewById(R.id.filterImage);
+
+
+
         CarDao dao = new CarDao();
         dao.SelectAll().addValueEventListener(new ValueEventListener() {
             @Override

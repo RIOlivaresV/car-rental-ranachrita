@@ -145,4 +145,18 @@
     <string name="msgShowReqSuccess">Your Request has been registered successfully!!</string>
     <string name="txtMsgReqWillFinalized">Your request will be finalized after a short view. Please check your notifications.</string>
     <string name="CloseBtn">Close</string>
+    <string name="carsImageForLogin">Image for login</string>
+    <string name="txtPaymentTopic">Enter Payment Info</string>
+    <string name="txtEnterNameOnCard">Full name on card:</string>
+    <string name="editTxtNameOnCard">Enter the full name</string>
+    <string name="txtCardTopic">Card number:</string>
+    <string name="editTxtCardNumber">Enter the card number</string>
+    <string name="txtExpirationTopic">Expiration date:</string>
+    <string name="txtCCVTopic">CVC:</string>
+    <string name="editTxtExpirationDate">Month/Year</string>
+    <string name="editTxtCVC">Enter CVC</string>
+    <string name="btnPayThePayment">ADD</string>
+    <string name="seat">Seats</string>
+    <string name="door">Doors</string>
+
 </resources>

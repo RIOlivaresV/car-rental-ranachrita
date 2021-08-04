@@ -28,12 +28,8 @@ public class UserDao implements IDao<User>{
     }
 
     @Override
-    public DatabaseReference Select(User entity) {
-        try {
-            return UserReference;
-        }catch (Exception e){
-            return null;
-        }
+    public DatabaseReference Select(String id) {
+        return null;
     }
 
     @Override

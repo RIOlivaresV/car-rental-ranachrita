@@ -3,14 +3,20 @@ package com.example.carrentalranachrita;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
+import android.widget.Button;
 
-public class showCarRequestForHost extends Fragment {
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link customerAddCardForPayment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class customerAddCardForPayment extends Fragment {
+
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,8 +27,9 @@ public class showCarRequestForHost extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public showCarRequestForHost() {
+    public customerAddCardForPayment() {
         // Required empty public constructor
+
     }
 
     /**
@@ -31,11 +38,11 @@ public class showCarRequestForHost extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment showCarRequestForHost.
+     * @return A new instance of fragment customerAddCardForPayment.
      */
     // TODO: Rename and change types and number of parameters
-    public static showCarRequestForHost newInstance(String param1, String param2) {
-        showCarRequestForHost fragment = new showCarRequestForHost();
+    public static customerAddCardForPayment newInstance(String param1, String param2) {
+        customerAddCardForPayment fragment = new customerAddCardForPayment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -56,9 +63,7 @@ public class showCarRequestForHost extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_show_car_request_for_host, container, false);
+        return inflater.inflate(R.layout.fragment_customer_add_card_for_payment, container, false);
     }
-
-
 
 }
