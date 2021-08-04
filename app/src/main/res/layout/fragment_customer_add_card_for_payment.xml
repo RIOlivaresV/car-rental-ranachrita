@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".customerAddCardForPayment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/txtPaymentTopic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txtPaymentTopic"
+            android:textSize="32sp"
+            android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/holo_orange_light"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtEnterNameOnCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txtEnterNameOnCard"
+                android:textSize="28sp" />
+
+            <EditText
+                android:id="@+id/editTxtNameOnCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:autofillHints="@string/editTxtNameOnCard"
+                android:background="@android:color/white"
+                android:drawableStart="@drawable/ic_person"
+                android:drawableLeft="@drawable/ic_person"
+                android:ems="24"
+                android:hint="@string/editTxtNameOnCard"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/txtCardTopic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txtCardTopic"
+                android:textSize="28sp" />
+
+            <EditText
+                android:id="@+id/editTxtCardNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:autofillHints="@string/editTxtCardNumber"
+                android:background="@color/ic_launcher_background"
+                android:drawableStart="@drawable/ic_credit_card"
+                android:drawableLeft="@drawable/ic_credit_card"
+                android:ems="10"
+                android:hint="@string/editTxtCardNumber"
+                android:inputType="number" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtExpirationTopic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/txtExpirationTopic"
+                        android:textSize="28sp" />
+
+                    <EditText
+                        android:id="@+id/editTxtExpirationDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:autofillHints="@string/editTxtExpirationDate"
+                        android:background="@color/white"
+                        android:drawableStart="@drawable/ic_date"
+                        android:drawableLeft="@drawable/ic_date"
+                        android:ems="10"
+                        android:hint="@string/editTxtExpirationDate"
+                        android:inputType="date" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtCCVTopic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/txtCCVTopic"
+                        android:textSize="28sp" />
+
+                    <EditText
+                        android:id="@+id/editTxtCVC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:autofillHints="@string/editTxtCVC"
+                        android:background="@color/white"
+                        android:drawableStart="@drawable/ic_key"
+                        android:drawableLeft="@drawable/ic_key"
+                        android:ems="10"
+                        android:hint="@string/editTxtCVC"
+                        android:inputType="numberPassword" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnPayThePayment"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btnPayThePayment"
+            android:textSize="24sp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+
+</FrameLayout>
