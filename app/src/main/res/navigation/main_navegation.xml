@@ -11,8 +11,8 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_login_to_carList"
-            app:destination="@id/carList" />
+            android:id="@+id/action_login_to_showListOfCarsAddedByHost"
+            app:destination="@id/showListOfCarsAddedByHost" />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
