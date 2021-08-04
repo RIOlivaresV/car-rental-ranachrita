@@ -158,5 +158,6 @@
     <string name="btnPayThePayment">ADD</string>
     <string name="seat">Seats</string>
     <string name="door">Doors</string>
+    <string name="txtSplash">Welcome to RANACHRITA!</string>
 
 </resources>
