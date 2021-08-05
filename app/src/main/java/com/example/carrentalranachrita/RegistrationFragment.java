@@ -88,7 +88,7 @@ public class RegistrationFragment extends Fragment {
                //String rol = r.getText().toString();
 
                // get selected radio button from radioGroup
-               String rol = String.valueOf(radioGroup.getCheckedRadioButtonId());
+               String rol = String.valueOf(r.getText().toString());
 
 
                if (name.isEmpty()){

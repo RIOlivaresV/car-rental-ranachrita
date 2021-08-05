@@ -38,7 +38,7 @@ public class Host_Activity extends AppCompatActivity {
 
         //Pass the ID's of Different destinations
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.showCarRequestForHost, R.id.hostProfile, R.id.Payment_Page, R.id.login)
+                R.id.showCarRequestForHost, R.id.hostProfile, R.id.Payment_Page/*, R.id.login*/)
                 .build();
 
 
