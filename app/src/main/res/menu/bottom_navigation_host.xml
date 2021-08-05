@@ -13,9 +13,9 @@
         android:id="@+id/Payment_Page"
         android:icon="@drawable/creditcard"
         android:title="Payment" />
-    <item
+    <!--<item
         android:id="@+id/login"
         android:icon="@drawable/logout"
-        android:title="Logout" />
+        android:title="Logout" />-->
 
 </menu>
