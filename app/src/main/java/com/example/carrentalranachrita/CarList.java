@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -68,7 +69,7 @@ public class CarList extends Fragment{
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 progressBar.setVisibility(View.VISIBLE);
                 CarAdapter adapter = new CarAdapter();
-                adapter.addView(view);
+                adapter.addView(Navigation.findNavController(view), view);
                 carArrayList.clear();
                 for (DataSnapshot child: snapshot.getChildren()) {
                     if (child.getValue() != null){

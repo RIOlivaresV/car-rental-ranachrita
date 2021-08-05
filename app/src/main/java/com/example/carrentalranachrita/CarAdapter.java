@@ -14,6 +14,9 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.carrentalranachrita.Daos.DaoCarImg;
@@ -37,6 +40,7 @@ import static androidx.navigation.Navigation.findNavController;
 public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder>{
     private ArrayList<Car> carArrayList;
     public SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy", Locale.ENGLISH);
+    private NavController controller;
     private View currentView;
 
     public CarAdapter(ArrayList<Car> carArrayList) {
@@ -47,8 +51,9 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder>{
         carArrayList = new ArrayList<Car>();
     }
 
-    public void addView(View view){
+    public void addView(NavController controller, View view){
         this.currentView = view;
+        this.controller = controller;
     }
 
     public void addCar(Car car){
@@ -102,7 +107,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder>{
         viewHolder.layout.setOnClickListener(v -> {
             Bundle arg = new Bundle();
             arg.putString("carId", car.getId());
-            findNavController(currentView).navigate(R.id.carDetail, arg);
+            findNavController(currentView).navigate(R.id.carlistToDetails, arg);
         });
 
         StorageReference imgRef = new DaoCarImg().SelectPiture(car.getHostId().replace("@", ""), car);
