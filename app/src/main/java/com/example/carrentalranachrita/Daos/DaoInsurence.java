@@ -14,7 +14,7 @@ public class DaoInsurence implements IDao<License>{
     @Override
     public boolean Insert(License entity) {
         try {
-            UserReference.child("car").e.setValue(entity);
+            UserReference.child("car").setValue(entity);
             return  true;
         }catch (Exception e){
             return false;
