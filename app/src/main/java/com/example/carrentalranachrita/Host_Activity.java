@@ -1,6 +1,5 @@
 package com.example.carrentalranachrita;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -9,7 +8,6 @@ import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -38,7 +36,7 @@ public class Host_Activity extends AppCompatActivity {
 
         //Pass the ID's of Different destinations
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.showCarRequestForHost, R.id.hostProfile, R.id.Payment_Page/*, R.id.login*/)
+                R.id.showCarRequestForHost, R.id.hostProfile, R.id.hostAddCar)
                 .build();
 
 

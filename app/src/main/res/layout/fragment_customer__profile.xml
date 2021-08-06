@@ -46,8 +46,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:gravity="center|left"
-                android:text="@string/txtHostFirstName"
+                android:gravity="center|left"/>
+              //  android:text="@string/txtHostFirstName"
                 android:textSize="25dp"
                 android:textStyle="bold" />
 
@@ -65,8 +65,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:gravity="center|left"
-                android:text="@string/txtHostSurname"
+                android:gravity="center|left"/>
+               // android:text="@string/txtHostSurname"
                 android:textSize="25dp"
                 android:textStyle="bold" />
 
@@ -84,8 +84,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:gravity="center|left"
-                android:text="@string/txtHostPhoneNumber"
+                android:gravity="center|left"/>
+              //  android:text="@string/txtHostPhoneNumber"
                 android:textSize="25dp"
                 android:textStyle="bold" />
 
@@ -103,8 +103,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:gravity="center|left"
-                android:text="@string/txtHostEmail"
+                android:gravity="center|left"/>
+            // android:text="@string/txtHostEmail"
                 android:textSize="25dp"
                 android:textStyle="bold" />
 
@@ -122,8 +122,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:gravity="center|left"
-                android:text="@string/txtHostPassword"
+                android:gravity="center|left"/>
+            //  android:text="@string/txtHostPassword"
                 android:textSize="25dp"
                 android:textStyle="bold" />
 

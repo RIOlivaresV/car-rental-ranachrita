@@ -3,13 +3,13 @@ package com.example.carrentalranachrita.Entities;
 import java.util.Date;
 
 public class Booking {
-    public  String DateStart;
-    public String TimeStart;
-    public String CustomerId;
-    public String DateEnd;
-    public String TimeEnd;
-    public Insurence Insurence;
-    public Rate Rate;
+    private  String DateStart;
+    private String TimeStart;
+    private String CustomerId;
+    private String DateEnd;
+    private String TimeEnd;
+    private Insurence Insurence;
+    private Rate Rate;
 
     public String getDateStart() {
         return DateStart;

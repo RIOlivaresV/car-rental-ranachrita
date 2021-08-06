@@ -122,10 +122,12 @@ public class Login extends Fragment {
                                                                         //Toast.makeText(getContext(), "inside", Toast.LENGTH_SHORT).show();
                                                                         User user = childSnapshot.getValue(User.class);
                                                                         if(user.getRol().equalsIgnoreCase("Host")){
+                                                                            Toast.makeText(getContext(), "Welcome", Toast.LENGTH_SHORT).show();
                                                                             Intent intent = new Intent(getActivity(),Host_Activity.class);
                                                                             startActivity(intent);
                                                                         }
                                                                         else{
+                                                                            Toast.makeText(getContext(), "Welcome", Toast.LENGTH_SHORT).show();
                                                                             Intent intent = new Intent(getActivity(),Customer_Activity.class);
                                                                             startActivity(intent);
                                                                     }

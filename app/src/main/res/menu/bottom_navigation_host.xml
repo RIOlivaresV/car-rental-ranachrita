@@ -9,13 +9,8 @@
         android:id="@+id/hostProfile"
         android:icon="@drawable/profile"
         android:title="Profile" />
-    <item
-        android:id="@+id/Payment_Page"
-        android:icon="@drawable/creditcard"
-        android:title="Payment" />
-    <!--<item
-        android:id="@+id/login"
-        android:icon="@drawable/logout"
-        android:title="Logout" />-->
+    <item android:title="Add Car"
+        android:id="@+id/addCar"
+        android:icon="@drawable/ic_car"/>
 
 </menu>

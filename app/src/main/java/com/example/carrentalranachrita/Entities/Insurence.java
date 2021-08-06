@@ -2,14 +2,15 @@ package com.example.carrentalranachrita.Entities;
 
 public class Insurence {
 
-    Boolean Insurance ;
+    private String Insurance ;
 
-    public void setInsurance(Boolean insurance){
-
-        this.Insurance = insurance;
-
+    public String getInsurance() {
+        return Insurance;
     }
 
+    public void setInsurance(String insurance) {
+        Insurance = insurance;
+    }
 }
 
 

@@ -2,13 +2,13 @@ package com.example.carrentalranachrita.Entities;
 
 public class Rate {
 
-    String rate;
+    private String rate;
 
-    public void setPriceValue(String rate){
-
-        this.rate=rate;
-
-
+    public String getRate() {
+        return rate;
     }
 
+    public void setRate(String rate) {
+        this.rate = rate;
+    }
 }

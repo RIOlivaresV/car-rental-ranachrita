@@ -24,6 +24,7 @@
         android:id="@+id/main_host_Fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         app:defaultNavHost="true"
+        android:paddingBottom="?attr/actionBarSize"
         app:navGraph="@navigation/hostnavigation"/>
 
 
