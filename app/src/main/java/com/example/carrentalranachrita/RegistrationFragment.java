@@ -88,7 +88,7 @@ public class RegistrationFragment extends Fragment {
                //String rol = r.getText().toString();
 
                // get selected radio button from radioGroup
-               String rol = String.valueOf(radioGroup.getCheckedRadioButtonId());
+               String rol = String.valueOf(r.getText().toString());
 
 
                if (name.isEmpty()){
@@ -165,6 +165,9 @@ public class RegistrationFragment extends Fragment {
                                    UserDao dao = new UserDao();
                                    Boolean isSuccess = dao.Insert(user);
                                    if (isSuccess){
+
+
+
                                        findNavController(view).navigate(R.id.backLogin);
                                        Toast.makeText(view.getContext(), "User created", Toast.LENGTH_LONG ).show();
                                    }

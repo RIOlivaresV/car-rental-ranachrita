@@ -8,6 +8,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,12 +23,18 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.carrentalranachrita.Daos.BookingDao;
 import com.example.carrentalranachrita.Daos.CarDao;
 import com.example.carrentalranachrita.Daos.DaoCarImg;
+import com.example.carrentalranachrita.Entities.Booking;
 import com.example.carrentalranachrita.Entities.Car;
+import com.example.carrentalranachrita.Entities.Insurence;
+import com.example.carrentalranachrita.Entities.Rate;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
@@ -89,6 +97,8 @@ public class CarDetail extends Fragment {
         TextView ownerInput = view.findViewById(R.id.hostNameValueTextView);
         Button Submit = view.findViewById(R.id.bookButton);
         Button insurance =view.findViewById(R.id.addInsuranceButton);
+        Insurence insurances = new Insurence();
+        insurances.setInsurance(Boolean.FALSE);
         Button checkAvialability = view.findViewById(R.id.checkAvailabilityButton);
         TextView priceInput = view.findViewById(R.id.priceValueTextView);
         ProgressBar progressBar = view.findViewById(R.id.progressBarCarDetails);
@@ -166,6 +176,9 @@ public class CarDetail extends Fragment {
                 });
                 insurance.setOnClickListener(v ->{
 
+                    insurances.setInsurance(Boolean.TRUE);
+
+
                 });
                 StorageReference imgRef = new DaoCarImg().SelectPiture(car.getHostId().replace("@", ""), car);
 
@@ -197,6 +210,41 @@ public class CarDetail extends Fragment {
 
             }
         });
+
+               //paste here
+        Submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Rate rates = new Rate();
+
+                rates.setPriceValue(priceInput.toString());
+
+                FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
+
+                Booking newBooking = new Booking();
+
+                newBooking.setCustomerId(currentFirebaseUser.getEmail());
+                newBooking.setDateEnd(dateEnd.toString());
+                newBooking.setDateStart(dateStart.toString());
+                newBooking.setInsurence(insurances);
+                newBooking.setRate(rates);
+                //newBooking.setTimeEnd();
+               // newBooking.setTimeStart();
+
+                BookingDao bookings = new BookingDao();
+                bookings.Insert(newBooking);
+
+                Fragment fragment = new confirmBookingForCustomer();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.confirmBooking, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+
+
         return view;
     }
 }

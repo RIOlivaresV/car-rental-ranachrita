@@ -3,22 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/--Douglas-Summer2021/Software Engineering/RANACHRITA/car-rental-ranachrita/app/src/main/res/layout/activity_confirm_booking_for_customer.xml" value="0.203125" />
-        <entry key="..\:/--Douglas-Summer2021/Software Engineering/RANACHRITA/car-rental-ranachrita/app/src/main/res/layout/activity_customer_policy_page.xml" value="0.203125" />
-        <entry key="..\:/--Douglas-Summer2021/Software Engineering/RANACHRITA/car-rental-ranachrita/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
-        <entry key="..\:/--Douglas-Summer2021/Software Engineering/RANACHRITA/car-rental-ranachrita/app/src/main/res/layout/activity_show_car_request_for_host.xml" value="0.36666666666666664" />
-        <entry key="..\:/--Douglas-Summer2021/Software Engineering/RANACHRITA/car-rental-ranachrita/app/src/main/res/layout/activity_show_list_of_cars_added_by_host.xml" value="0.203125" />
-        <entry key="..\:/--Douglas-Summer2021/Software Engineering/RANACHRITA/car-rental-ranachrita/app/src/main/res/layout/carbox_layout.xml" value="0.36666666666666664" />
-        <entry key="..\:/--Douglas-Summer2021/Software Engineering/RANACHRITA/car-rental-ranachrita/app/src/main/res/layout/fragment_add_car.xml" value="0.36666666666666664" />
-        <entry key="..\:/--Douglas-Summer2021/Software Engineering/RANACHRITA/car-rental-ranachrita/app/src/main/res/layout/fragment_car_detail.xml" value="0.36666666666666664" />
-        <entry key="..\:/--Douglas-Summer2021/Software Engineering/RANACHRITA/car-rental-ranachrita/app/src/main/res/layout/fragment_filter.xml" value="0.36666666666666664" />
-        <entry key="..\:/--Douglas-Summer2021/Software Engineering/RANACHRITA/car-rental-ranachrita/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
-        <entry key="..\:/--Douglas-Summer2021/Software Engineering/RANACHRITA/car-rental-ranachrita/app/src/main/res/layout/fragment_host_add_car.xml" value="0.36666666666666664" />
-        <entry key="..\:/--Douglas-Summer2021/Software Engineering/RANACHRITA/car-rental-ranachrita/app/src/main/res/layout/fragment_login.xml" value="0.36666666666666664" />
-        <entry key="..\:/--Douglas-Summer2021/Software Engineering/RANACHRITA/car-rental-ranachrita/app/src/main/res/layout/fragment_registration.xml" value="0.36666666666666664" />
-        <entry key="..\:/OneDrive - Douglas College/Seventh Semester/Software Engineering/Project/app/src/main/res/layout/activity_splash_actvity.xml" value="0.10677083333333333" />
-        <entry key="..\:/OneDrive - Douglas College/Seventh Semester/Software Engineering/Project/app/src/main/res/layout/fragment_car_list.xml" value="0.20416666666666666" />
-        <entry key="..\:/OneDrive - Douglas College/Seventh Semester/Software Engineering/Project/app/src/main/res/layout/fragment_host_add_car.xml" value="0.14166666666666666" />
+        <entry key="..\:/car-rental-ranachrita-Christy(3)/app/src/main/res/layout/fragment_add_car.xml" value="0.1796875" />
+        <entry key="..\:/car-rental-ranachrita-Christy(3)/app/src/main/res/layout/fragment_car_detail.xml" value="0.1796875" />
+        <entry key="..\:/car-rental-ranachrita-Christy(3)/app/src/main/res/layout/fragment_filter.xml" value="0.1796875" />
+        <entry key="..\:/car-rental-ranachrita-Christy(3)/app/src/main/res/layout/fragment_host_add_car.xml" value="0.1796875" />
+        <entry key="..\:/car-rental-ranachrita-Christy(3)/app/src/main/res/layout/fragment_host_profile.xml" value="0.1" />
       </map>
     </option>
   </component>
