@@ -102,7 +102,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder>{
         viewHolder.layout.setOnClickListener(v -> {
             Bundle arg = new Bundle();
             arg.putString("carId", car.getId());
-            findNavController(currentView).navigate(R.id.carDetail, arg);
+            findNavController(currentView).navigate(R.id.carListToDetails, arg);
         });
 
         StorageReference imgRef = new DaoCarImg().SelectPiture(car.getHostId().replace("@", ""), car);
