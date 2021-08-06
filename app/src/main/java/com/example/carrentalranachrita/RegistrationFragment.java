@@ -87,9 +87,6 @@ public class RegistrationFragment extends Fragment {
                String confirmPassword = confirmPasswordEdit.getText().toString();
                //String rol = r.getText().toString();
 
-               // get selected radio button from radioGroup
-               String rol = String.valueOf(r.getText().toString());
-
 
                if (name.isEmpty()){
                    nameEdit.setError("Name is required");
@@ -154,7 +151,8 @@ public class RegistrationFragment extends Fragment {
                        return;
                    }
 
-
+               // get selected radio button from radioGroup
+               String rol = String.valueOf(r.getText().toString());
 
                User user = new User(name, lastName,email, phoneNummber, password, rol );
                mAuth.createUserWithEmailAndPassword(email, password)
