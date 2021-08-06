@@ -26,12 +26,6 @@
 
 
     <fragment
-        android:id="@+id/hostAddCar"
-        android:name="com.example.carrentalranachrita.HostAddCar"
-        android:label="fragment_host_add_car"
-        tools:layout="@layout/fragment_host_add_car" >
-    </fragment>
-    <fragment
         android:id="@+id/hostProfile"
         android:name="com.example.carrentalranachrita.hostProfile"
         android:label="fragment_host_profile"

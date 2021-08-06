@@ -20,12 +20,6 @@
         tools:layout="@layout/fragment_host_profile" />
 
     <fragment
-        android:id="@+id/Payment_Page"
-        android:name="com.example.carrentalranachrita.customerAddCardForPayment"
-        android:label="fragment_customer_add_card_for_payment"
-        tools:layout="@layout/fragment_customer_add_card_for_payment" />
-
-    <fragment
         android:id="@+id/showListOfCarsAddedByHost"
         android:name="com.example.carrentalranachrita.showListOfCarsAddedByHost"
         android:label="fragment_show_list_of_cars_added_by_host"
@@ -34,8 +28,7 @@
         android:id="@+id/hostAddCar"
         android:name="com.example.carrentalranachrita.HostAddCar"
         android:label="fragment_host_add_car"
-        tools:layout="@layout/fragment_host_add_car" >
-    </fragment>
+        tools:layout="@layout/fragment_host_add_car"></fragment>
 
     <fragment
         android:id="@+id/addCarFragment"

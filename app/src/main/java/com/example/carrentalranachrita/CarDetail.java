@@ -98,7 +98,7 @@ public class CarDetail extends Fragment {
         Button Submit = view.findViewById(R.id.bookButton);
         Button insurance =view.findViewById(R.id.addInsuranceButton);
         Insurence insurances = new Insurence();
-        insurances.setInsurance(Boolean.FALSE);
+        insurances.setInsurance("12456312");
         Button checkAvialability = view.findViewById(R.id.checkAvailabilityButton);
         TextView priceInput = view.findViewById(R.id.priceValueTextView);
         ProgressBar progressBar = view.findViewById(R.id.progressBarCarDetails);
@@ -176,7 +176,7 @@ public class CarDetail extends Fragment {
                 });
                 insurance.setOnClickListener(v ->{
 
-                    insurances.setInsurance(Boolean.TRUE);
+                    insurances.setInsurance("12456312");
 
 
                 });
@@ -199,7 +199,7 @@ public class CarDetail extends Fragment {
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull @NotNull Exception e) {
-                        Snackbar.make(view, "Something was wrong with your picture, refresh it.", Snackbar.LENGTH_LONG).show();
+                        //Snackbar.make(view, "Something was wrong with your picture, refresh it.", Snackbar.LENGTH_LONG).show();
                     }
                 });
                 progressBar.setVisibility(View.GONE);
@@ -218,7 +218,7 @@ public class CarDetail extends Fragment {
 
                 Rate rates = new Rate();
 
-                rates.setPriceValue(priceInput.toString());
+                rates.setRate(priceInput.toString());
 
                 FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
 

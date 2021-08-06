@@ -1,7 +1,7 @@
 package com.example.carrentalranachrita.Entities;
 
 public class License {
-    public String Number;
+    private String Number;
 
     public String getNumber() {
         return Number;

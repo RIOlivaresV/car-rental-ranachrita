@@ -30,7 +30,7 @@
         tools:layout="@layout/fragment_confirm_booking_for_customer" />
 
     <fragment
-        android:id="@+id/Payment_Page"
+        android:id="@+id/Add_car"
         android:name="com.example.carrentalranachrita.customerAddCardForPayment"
         android:label="fragment_customer_add_card_for_payment"
         tools:layout="@layout/fragment_customer_add_card_for_payment" />

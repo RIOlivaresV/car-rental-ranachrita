@@ -98,6 +98,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder>{
             });
             alertDialog.show();
         });
+        viewHolder.image.setVisibility(View.GONE);
         viewHolder.ratingBar.setIsIndicator(true);
         String driver = "The car's owner can be driver.";
         if (car.isOwnerDriver()){
@@ -130,7 +131,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder>{
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull @NotNull Exception e) {
-                Snackbar.make(currentView, "Something was wrong with your picture, refresh it.", Snackbar.LENGTH_LONG).show();
+               // Snackbar.make(currentView, "Something was wrong with your picture, refresh it.", Snackbar.LENGTH_LONG).show();
             }
         });
     }
