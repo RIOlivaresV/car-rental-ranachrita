@@ -31,15 +31,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb3144bf-7495-4618-8ff0-259e27a3fa1e" name="Default Changelist" comment="1 August - Login Style changed">
-      <change afterPath="$PROJECT_DIR$/../.idea/runConfigurations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/carrentalranachrita/customerAddCardForPayment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_customer_add_card_for_payment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/carrentalranachrita/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/carrentalranachrita/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/main_navegation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/main_navegation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\Taban\.android\avd\Nexus_5X_API_30.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -106,7 +111,7 @@
         <entry key="$PROJECT_DIR$" value="carsList" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="hiddenUrls">
@@ -128,7 +133,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.recentlyUsedThemes" value="Base.V14.Theme.MaterialComponents.Light.DarkActionBar.Bridge&#10;Theme.MaterialComponents.Light.DarkActionBar.Bridge&#10;Theme.MaterialComponents.Light.DialogWhenLarge&#10;Theme.MaterialComponents.Light.LargeTouch&#10;Base.Theme.AppCompat.Light.DarkActionBar" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -170,22 +175,8 @@
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="mipmap-xhdpi.* and 5 more" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CarRental.Ranachrita.app" />
-      <option name="TEST_OBJECT" value="pattern" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <patterns>
-        <pattern testClass="mipmap-xhdpi.*" />
-        <pattern testClass="mipmap-xxhdpi.*" />
-        <pattern testClass="mipmap-hdpi.*" />
-        <pattern testClass="mipmap-mdpi.*" />
-        <pattern testClass="mipmap-xxxhdpi.*" />
-        <pattern testClass="mipmap-anydpi-v26.*" />
-      </patterns>
       <method v="2">
-        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -242,7 +233,24 @@
       <option name="ACTIVITY_CLASS" value="" />
       <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
       <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
-      <method v="2" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mipmap-xhdpi.* and 5 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CarRental.Ranachrita.app" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="mipmap-xhdpi.*" />
+        <pattern testClass="mipmap-xxhdpi.*" />
+        <pattern testClass="mipmap-hdpi.*" />
+        <pattern testClass="mipmap-mdpi.*" />
+        <pattern testClass="mipmap-xxxhdpi.*" />
+        <pattern testClass="mipmap-anydpi-v26.*" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -427,10 +435,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="12" y="59" width="1220" height="579" key="DiffContextDialog/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1626839652998" />
-    <state x="505" y="156" key="FileChooserDialogImpl" timestamp="1628213957039">
-      <screen x="0" y="40" width="1536" height="824" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1627846269993">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="505" y="156" key="FileChooserDialogImpl/0.40.1536.824/2400.40.1920.1040@0.40.1536.824" timestamp="1628213957039" />
     <state x="421" y="96" key="FileChooserDialogImpl/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627846269993" />
     <state width="363" height="312" key="Git.Branch.Popup" timestamp="1627795138406">
       <screen x="0" y="0" width="1280" height="680" />
