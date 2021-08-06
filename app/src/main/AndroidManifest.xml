@@ -18,11 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Host_Activity"></activity>
-        <activity android:name=".Customer_Activity" />
-        <activity android:name=".confirmBookingForCustomer" />
-        <activity android:name=".customerPolicyPage" />
-        <activity android:name=".showListOfCarsAddedByHost" />
-        <activity android:name=".showCarRequestForHost" />
+        <activity android:name=".Customer_Activity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

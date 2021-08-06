@@ -27,6 +27,9 @@
         <action
             android:id="@+id/action_carList_to_filterFragment"
             app:destination="@id/filterFragment" />
+        <action
+            android:id="@+id/carListToDetails"
+            app:destination="@id/carDetail" />
     </fragment>
 
 
@@ -47,18 +50,14 @@
         android:name="com.example.carrentalranachrita.AddCarFragment"
         android:label="fragment_add_car"
         tools:layout="@layout/fragment_add_car" />
-    <fragment
-        android:id="@+id/carList"
-        android:name="com.example.carrentalranachrita.CarList"
-        android:label="fragment_car_list"
-        tools:layout="@layout/fragment_car_list" />
+
     <fragment
         android:id="@+id/filterFragment"
         android:name="com.example.carrentalranachrita.FilterFragment"
         android:label="fragment_filter"
         tools:layout="@layout/fragment_filter" />
     <fragment
-        android:id="@+id/carDetail2"
+        android:id="@+id/carDetail"
         android:name="com.example.carrentalranachrita.CarDetail"
         android:label="fragment_car_detail"
         tools:layout="@layout/fragment_car_detail" />

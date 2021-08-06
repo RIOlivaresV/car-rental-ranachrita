@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".confirmBookingForCustomer">
+    tools:context=".confirmBookingForCustomer"
+    android:id="@+id/confirmBooking">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -28,14 +29,14 @@
             android:text="@string/txtMsgReqWillFinalized"
             android:textSize="20sp" />
 
-        <Button
+        <!--<Button
             android:id="@+id/CloseBtn"
             android:layout_width="334dp"
             android:layout_height="77dp"
             android:layout_gravity="center"
             android:layout_margin="20dp"
             android:text="@string/CloseBtn"
-            android:textSize="20sp" />
+            android:textSize="20sp" />-->
     </LinearLayout>
 
 </FrameLayout>

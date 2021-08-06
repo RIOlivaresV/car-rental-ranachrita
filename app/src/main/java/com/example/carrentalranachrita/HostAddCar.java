@@ -186,6 +186,7 @@ public class HostAddCar extends Fragment {
                         newCar.setTransmission("Automatic");
                     }
                     return;
+                    //goo
                 }
                 if(price.isEmpty()){
                     priceInput.setError("Price is required");
