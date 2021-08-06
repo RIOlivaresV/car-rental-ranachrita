@@ -14,6 +14,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
@@ -106,7 +107,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder>{
         }
         viewHolder.layout.setOnClickListener(v -> {
             Bundle arg = new Bundle();
-            arg.putString("carId", car.getId());
+            arg.putString("carId", car.getId());;
             findNavController(currentView).navigate(R.id.carlistToDetails, arg);
         });
 
