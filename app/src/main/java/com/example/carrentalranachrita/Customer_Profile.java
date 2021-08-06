@@ -2,11 +2,23 @@ package com.example.carrentalranachrita;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.annotations.NotNull;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,7 +36,16 @@ public class Customer_Profile extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    FirebaseAuth firebaseAuth;
+    FirebaseUser firebaseUser;
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
+
+    TextView txtCustomerFirstName,txtCustomerSurname,txtCustomerPhoneNumber,txtCustomerEmail,txtCustomerPassword;
+
     public Customer_Profile() {
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+
         // Required empty public constructor
     }
 
@@ -58,7 +79,66 @@ public class Customer_Profile extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
+        View view = inflater.inflate(R.layout.fragment_customer__profile, container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_customer__profile, container, false);
+
+        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("user");
+
+        //init views
+
+        txtCustomerFirstName = view.findViewById(R.id.txtCustomerFirstName);
+        txtCustomerSurname = view.findViewById(R.id.txtCustomerSurname);
+        txtCustomerEmail = view.findViewById(R.id.txtCustomerEmail);
+        txtCustomerPhoneNumber = view.findViewById(R.id.txtCustomerPhoneNumber);
+        txtCustomerPassword = view.findViewById(R.id.txtCustomerPassword);
+
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        DatabaseReference msDatabaseReference = FirebaseDatabase.getInstance().getReference();DatabaseReference mDatabaseReference = FirebaseDatabase.getInstance().getReference();
+        Query query =  msDatabaseReference.child("user").orderByChild("email").equalTo(firebaseAuth.getCurrentUser().getEmail());
+
+        // Query query = databaseReference.orderByChild("email").equalTo(currentFirebaseUser.getEmail());
+        query.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NotNull @NonNull DataSnapshot snapshot) {
+                //checking required data get called
+
+                for(DataSnapshot childSnapshot: snapshot.getChildren())
+                {
+                    // get data
+
+                    String name =""+ childSnapshot.child("name").getValue();
+                    String lastName =""+ childSnapshot.child("lastName").getValue();
+                    String email =""+ childSnapshot.child("email").getValue();
+                    String phoneNumber =""+ childSnapshot.child("phoneNumber").getValue();
+                    String password =""+ childSnapshot.child("password").getValue();
+
+                    // set data
+
+                    txtCustomerFirstName.setText(name);
+                    txtCustomerSurname.setText(lastName);
+                    txtCustomerEmail.setText(email);
+                    txtCustomerPhoneNumber.setText(phoneNumber);
+                    txtCustomerPassword.setText("******");
+
+
+
+
+                }
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        return view;
     }
 }
