@@ -38,82 +38,10 @@ public class UserDaoTest extends TestCase {
 
     @Before
     public void before() {
-        MockitoAnnotations.initMocks(this);
-        Object successsTask =new Task<AuthResult>() {
+        mockedDatabaseReference = mock(DatabaseReference.class);
 
-            @Override
-            public boolean isComplete() {
-                return true;
-            }
-
-            @Override
-            public boolean isSuccessful() {
-                return true;
-            }
-
-            @Override
-            public boolean isCanceled() {
-                return false;
-            }
-
-            @Nullable
-            @Override
-            public AuthResult getResult() {
-                return null;
-            }
-
-            @Nullable
-            @Override
-            public <X extends Throwable> AuthResult getResult(@NonNull Class<X> aClass) throws X {
-                return null;
-            }
-
-            @Nullable
-            @Override
-            public Exception getException() {
-                return null;
-            }
-
-            @NonNull
-            @Override
-            public Task<AuthResult> addOnSuccessListener(@NonNull OnSuccessListener<? super AuthResult> onSuccessListener) {
-                return null;
-            }
-
-            @NonNull
-            @Override
-            public Task<AuthResult> addOnSuccessListener(@NonNull Executor executor, @NonNull OnSuccessListener<? super AuthResult> onSuccessListener) {
-                return null;
-            }
-
-            @NonNull
-            @Override
-            public Task<AuthResult> addOnSuccessListener(@NonNull Activity activity, @NonNull OnSuccessListener<? super AuthResult> onSuccessListener) {
-                return null;
-            }
-
-            @NonNull
-            @Override
-            public Task<AuthResult> addOnFailureListener(@NonNull OnFailureListener onFailureListener) {
-                return null;
-            }
-
-            @NonNull
-            @Override
-            public Task<AuthResult> addOnFailureListener(@NonNull Executor executor, @NonNull OnFailureListener onFailureListener) {
-                return null;
-            }
-
-            @NonNull
-            @Override
-            public Task<AuthResult> addOnFailureListener(@NonNull Activity activity, @NonNull OnFailureListener onFailureListener) {
-                return null;
-            }
-        };
-//        mockedDatabaseReference = mock(DatabaseReference.class);
-//
-//        FirebaseDatabase mockedFirebaseDatabase = mock(FirebaseDatabase.class);
-//        when(mockedFirebaseDatabase.getReference()).thenReturn(mockedDatabaseReference);
+        FirebaseDatabase mockedFirebaseDatabase = mock(FirebaseDatabase.class);
+        when(mockedFirebaseDatabase.getReference()).thenReturn(mockedDatabaseReference);
     }
 
     @Test
@@ -127,7 +55,6 @@ public class UserDaoTest extends TestCase {
         user.setRol("Host");
         user.setPassword("1Maj$88REt");
         when(dao.Insert(user)).thenReturn(true);
-
     }
 
     @Test
@@ -135,9 +62,6 @@ public class UserDaoTest extends TestCase {
         FirebaseAuth auth = mock(FirebaseAuth.class);
         String emailUser = "jb@test.com";
         String password = "1Maj$88REt";
-        when(auth.signInWithEmailAndPassword(emailUser, password).getResult()).then(invocation -> {
-            assertTrue(invocation!=null);
-            return null;
-        });
+        when(auth.signInWithEmailAndPassword(emailUser, password)).equals(firebaseUser);
     }
 }
