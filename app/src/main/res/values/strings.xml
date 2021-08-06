@@ -101,7 +101,7 @@
     <string name="uploadImage">Upload Image</string>
     <string name="carDetail">Car Detail</string>
     <string name="carAvailability">Car Availability</string>
-    <string name="txtLocationHost">location</string>
+    <string name="txtLocationHost">Location</string>
     <string name="txtCarColor">Color</string>
     <string name="odometer">Odometer</string>
     <string name="automaticBtn">Automatic</string>
@@ -158,5 +158,6 @@
     <string name="btnPayThePayment">ADD</string>
     <string name="seat">Seats</string>
     <string name="door">Doors</string>
+    <string name="txtSplash">Welcome to RANACHRITA!</string>
 
 </resources>

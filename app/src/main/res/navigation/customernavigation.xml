@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_carList_to_filterFragment"
             app:destination="@id/filterFragment" />
+        <action
+            android:id="@+id/carlistToDetails"
+            app:destination="@id/carDetail2" />
     </fragment>
 
     <fragment

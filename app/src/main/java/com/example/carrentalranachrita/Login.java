@@ -103,11 +103,11 @@ public class Login extends Fragment {
 //                                findNavController(view).navigate(R.id.carList);
                                 //to decide what is the home view depending of the rol
 //                                 findNavController(view).navigate(R.id.hostProfile);
-                                // findNavController(view).navigate(R.id.hostAddCar);
+//                                 findNavController(view).navigate(R.id.hostAddCar);
                                 //***findNavController(view).navigate(R.id.carList);
 //                                 findNavController(view).navigate(R.id.hostProfile);
-                                 //findNavController(view).navigate(R.id.carDetail);
-//                                findNavController(view).navigate(R.id.carList);
+                                // findNavController(view).navigate(R.id.showListOfCarsAddedByHost);
+                                // findNavController(view).navigate(R.id.carList);
                                 // findNavController(view).navigate(R.id.confirmBookingForCustomer);
 
                                 DatabaseReference mDatabaseReference = FirebaseDatabase.getInstance().getReference();
