@@ -20,21 +20,10 @@
         tools:layout="@layout/fragment_host_profile" />
 
     <fragment
-        android:id="@+id/showListOfCarsAddedByHost"
-        android:name="com.example.carrentalranachrita.showListOfCarsAddedByHost"
-        android:label="fragment_show_list_of_cars_added_by_host"
-        tools:layout="@layout/fragment_show_list_of_cars_added_by_host" />
-    <fragment
         android:id="@+id/hostAddCar"
         android:name="com.example.carrentalranachrita.HostAddCar"
         android:label="fragment_host_add_car"
         tools:layout="@layout/fragment_host_add_car"></fragment>
-
-    <fragment
-        android:id="@+id/addCarFragment"
-        android:name="com.example.carrentalranachrita.AddCarFragment"
-        android:label="fragment_add_car"
-        tools:layout="@layout/fragment_add_car" />
 
     <!--<fragment
         android:id="@+id/login"

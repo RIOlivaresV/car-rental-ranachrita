@@ -1,5 +1,7 @@
 package com.example.carrentalranachrita;
 
+import static androidx.navigation.Navigation.findNavController;
+
 import android.app.DatePickerDialog;
 import android.net.Uri;
 import android.os.Build;
@@ -235,12 +237,7 @@ public class CarDetail extends Fragment {
                 BookingDao bookings = new BookingDao();
                 bookings.Insert(newBooking);
 
-                Fragment fragment = new confirmBookingForCustomer();
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.confirmBooking, fragment);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                findNavController(v).navigate(R.id.confirmBookingForCustomer);
             }
         });
 

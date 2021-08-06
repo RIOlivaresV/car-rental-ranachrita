@@ -31,7 +31,7 @@ public class Customer_Activity extends AppCompatActivity {
 
         //Pass the ID's of Different destinations
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.carList, R.id.Customer_Profile, R.id.Payment_Page, R.id.login )
+                R.id.carList, R.id.Customer_Profile, R.id.Add_Card)
                 .build();
 
         //Initialize NavController.

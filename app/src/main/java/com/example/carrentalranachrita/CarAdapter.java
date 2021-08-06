@@ -52,9 +52,8 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder>{
         carArrayList = new ArrayList<Car>();
     }
 
-    public void addView(NavController controller, View view){
+    public void addView( View view){
         this.currentView = view;
-        this.controller = controller;
     }
 
     public void addCar(Car car){
@@ -121,19 +120,19 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder>{
             e.printStackTrace();
         }
 
-        File finalLocalFile = localFile;
-
-        imgRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
-            @Override
-            public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
-                viewHolder.carPicture.setImageURI(Uri.fromFile(finalLocalFile));
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull @NotNull Exception e) {
-               // Snackbar.make(currentView, "Something was wrong with your picture, refresh it.", Snackbar.LENGTH_LONG).show();
-            }
-        });
+//        File finalLocalFile = localFile;
+//
+//        imgRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+//            @Override
+//            public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+//                viewHolder.carPicture.setImageURI(Uri.fromFile(finalLocalFile));
+//            }
+//        }).addOnFailureListener(new OnFailureListener() {
+//            @Override
+//            public void onFailure(@NonNull @NotNull Exception e) {
+//               // Snackbar.make(currentView, "Something was wrong with your picture, refresh it.", Snackbar.LENGTH_LONG).show();
+//            }
+//        });
     }
 
 

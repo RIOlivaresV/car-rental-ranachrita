@@ -69,7 +69,7 @@ public class CarList extends Fragment{
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 progressBar.setVisibility(View.VISIBLE);
                 CarAdapter adapter = new CarAdapter();
-                adapter.addView(Navigation.findNavController(view), view);
+                adapter.addView(view);
                 carArrayList.clear();
                 for (DataSnapshot child: snapshot.getChildren()) {
                     if (child.getValue() != null){
