@@ -98,6 +98,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder>{
             });
             alertDialog.show();
         });
+        viewHolder.image.setVisibility(View.GONE);
         viewHolder.ratingBar.setIsIndicator(true);
         String driver = "The car's owner can be driver.";
         if (car.isOwnerDriver()){
