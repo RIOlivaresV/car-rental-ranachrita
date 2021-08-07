@@ -5,6 +5,18 @@
     android:id="@+id/hostnavigation"
     app:startDestination="@id/showCarRequestForHost">
 
+    <fragment
+    android:id="@+id/carList"
+    android:name="com.example.carrentalranachrita.CarList"
+    android:label="fragment_car_list"
+    tools:layout="@layout/fragment_car_list" >
+    <action
+        android:id="@+id/action_carList_to_filterFragment"
+        app:destination="@id/filterFragment" />
+    <action
+        android:id="@+id/carlistToDetails"
+        app:destination="@id/carDetail2" />
+    </fragment>
 
 
     <fragment

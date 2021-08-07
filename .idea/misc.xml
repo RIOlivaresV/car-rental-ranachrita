@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DesignSurface">
-    <option name="filePathToZoomLevelMap">
-      <map>
-        <entry key="..\:/Users/chris/Downloads/V1/car-rental-ranachrita-Christy(3)/app/src/main/res/layout/fragment_car_detail.xml" value="0.536" />
-        <entry key="..\:/Users/chris/Downloads/V1/car-rental-ranachrita-Christy(3)/app/src/main/res/layout/fragment_confirm_booking_for_customer.xml" value="0.23324275362318841" />
-        <entry key="..\:/Users/chris/Downloads/V1/car-rental-ranachrita-Christy(3)/app/src/main/res/layout/fragment_customer_add_card_for_payment.xml" value="0.13020833333333334" />
-        <entry key="..\:/Users/chris/Downloads/V1/car-rental-ranachrita-Christy(3)/app/src/main/res/menu/bottom_navigation_customer.xml" value="0.25416666666666665" />
-      </map>
-    </option>
-  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

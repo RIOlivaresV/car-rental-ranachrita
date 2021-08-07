@@ -48,6 +48,7 @@ import org.jetbrains.annotations.NotNull;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -55,6 +56,7 @@ import java.util.Locale;
 public class CarDetail extends Fragment {
 
     private String CarID;
+    public SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
 
     public String getCarID() {
         return CarID;
@@ -227,15 +229,17 @@ public class CarDetail extends Fragment {
                 Booking newBooking = new Booking();
 
                 newBooking.setCustomerId(currentFirebaseUser.getEmail());
-                newBooking.setDateEnd(dateEnd.toString());
-                newBooking.setDateStart(dateStart.toString());
+                newBooking.setDateEnd(sdf.format(dateEnd));
+                newBooking.setDateStart(sdf.format(dateStart));
                 newBooking.setInsurence(insurances);
                 newBooking.setRate(rates);
                 //newBooking.setTimeEnd();
                // newBooking.setTimeStart();
 
                 BookingDao bookings = new BookingDao();
-                bookings.Insert(newBooking);
+                ArrayList<Booking> list = new ArrayList<>();
+                list.add(newBooking);
+                bookings.InsertBooking(list, getCarID());
 
                 findNavController(v).navigate(R.id.confirmBookingForCustomer);
             }

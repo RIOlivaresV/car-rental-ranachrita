@@ -4,6 +4,8 @@ import com.example.carrentalranachrita.Entities.Booking;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.List;
+
 public class BookingDao implements IDao<Booking>{
 
     private String Reference = "car";
@@ -12,11 +14,19 @@ public class BookingDao implements IDao<Booking>{
 
     public BookingDao(){UserReference = firebaseDatabase.getReference(Reference);}
 
+    public boolean InsertBooking(List<Booking> bookings, String carId){
+        try {
+            UserReference.child(carId).child("booking").setValue(bookings);
+            return  true;
+        }catch (Exception e){
+            return false;
+        }
+    }
 
     @Override
     public boolean Insert(Booking entity) {
         try {
-            UserReference.child("car").setValue(entity);
+            UserReference.child("booking").setValue(entity);
             return  true;
         }catch (Exception e){
             return false;
