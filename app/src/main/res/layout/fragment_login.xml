@@ -64,7 +64,7 @@
             android:layout_height="65dp"
             android:layout_marginBottom="20dp"
             android:background="#009688"
-            android:text="Sing in"
+            android:text="Sign in"
             android:textSize="20sp" />
 
         <TextView
