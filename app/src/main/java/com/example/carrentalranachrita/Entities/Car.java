@@ -25,6 +25,7 @@ public class Car {
     private double Price;
     private String Location;
     private ArrayList<Booking> Booking;
+    private License License;
     private Date CreatedDate;
 //
     public ArrayList<Booking> getBooking() {
@@ -72,6 +73,8 @@ public class Car {
         Type = "";
         From = new Date();
         To = new Date();
+        Booking = new ArrayList<Booking>();
+        License = new License();
         CreatedDate = Calendar.getInstance().getTime();
     }
 

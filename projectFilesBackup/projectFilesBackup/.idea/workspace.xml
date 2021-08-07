@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bb3144bf-7495-4618-8ff0-259e27a3fa1e" name="Default Changelist" comment="1 August - Login Style changed">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/carrentalranachrita/customerAddCardForPayment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_customer_add_card_for_payment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/carrentalranachrita/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/carrentalranachrita/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/main_navegation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/main_navegation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\Taban\.android\avd\Nexus_5X_API_30.avd]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CarRental.Ranachrita" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CarRental.Ranachrita" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CarRental.Ranachrita" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="resourceFile" />
+        <option value="layoutResourceFile" />
+        <option value="Class" />
+        <option value="valueResourceFile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="master" />
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="dev" />
+                <branch-info repo="$PROJECT_DIR$" source="TabanBranch" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="carsList" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/RIOlivaresV/car-rental-ranachrita" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1v65sqhLEhDDMZ5AiSdwbe5F2n2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="VirtualDevicePath@C:\Users\Taban\.android\avd\Nexus_5X_API_30.avd" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-07-13T02:44:14.538673800Z" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android.recentlyUsedThemes" value="Base.V14.Theme.MaterialComponents.Light.DarkActionBar.Bridge&#10;Theme.MaterialComponents.Light.DarkActionBar.Bridge&#10;Theme.MaterialComponents.Light.DialogWhenLarge&#10;Theme.MaterialComponents.Light.LargeTouch&#10;Base.Theme.AppCompat.Light.DarkActionBar" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.-499623876">
+      <recent name="com.example.carrentalranachrita" />
+    </key>
+    <key name="android.template.-2072812964">
+      <recent name="com.example.carrentalranachrita" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Taban\Documents\GitHub\car-rental-ranachrita\app\src\main\res\drawable" />
+      <recent name="C:\Users\Taban\Documents\GitHub\car-rental-ranachrita\app\src\main\res\drawable-v24" />
+      <recent name="C:\Users\Taban\Documents\GitHub\car-rental-ranachrita\app\src\main\res\mipmap-xhdpi" />
+    </key>
+    <key name="android.template.478526765">
+      <recent name="com.example.carrentalranachrita" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Taban\Documents\GitHub\car-rental-ranachrita\app\src\main\res\drawable-v24" />
+    </key>
+    <key name="android.template.-301533616">
+      <recent name="com.example.carrentalranachrita" />
+    </key>
+    <key name="android.template.-974914605">
+      <recent name="com.example.carrentalranachrita" />
+    </key>
+    <key name="android.template.1600500951">
+      <recent name="com.example.carrentalranachrita" />
+    </key>
+    <key name="android.template.1329233510">
+      <recent name="com.example.carrentalranachrita" />
+      <recent name="com.example.carrentalranachrita.Entities" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Android App.app">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="CarRental.Ranachrita.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mipmap-xhdpi.* and 5 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CarRental.Ranachrita.app" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="mipmap-xhdpi.*" />
+        <pattern testClass="mipmap-xxhdpi.*" />
+        <pattern testClass="mipmap-hdpi.*" />
+        <pattern testClass="mipmap-mdpi.*" />
+        <pattern testClass="mipmap-xxxhdpi.*" />
+        <pattern testClass="mipmap-anydpi-v26.*" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb3144bf-7495-4618-8ff0-259e27a3fa1e" name="Default Changelist" comment="" />
+      <created>1625869911407</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1625869911407</updated>
+    </task>
+    <task id="LOCAL-00001" summary="host adding car page commit">
+      <created>1626829495211</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1626829495211</updated>
+    </task>
+    <task id="LOCAL-00002" summary="host adding car page commit second commit">
+      <created>1626833219634</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1626833219634</updated>
+    </task>
+    <task id="LOCAL-00003" summary="host adding car page commit fourth commit">
+      <created>1626835633517</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1626835633517</updated>
+    </task>
+    <task id="LOCAL-00004" summary="host adding car page commit fifth commit">
+      <created>1626835852785</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1626835852785</updated>
+    </task>
+    <task id="LOCAL-00005" summary="scrollbar added">
+      <created>1626837453398</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1626837453399</updated>
+    </task>
+    <task id="LOCAL-00006" summary="during the meeting">
+      <created>1626838690992</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1626838690992</updated>
+    </task>
+    <task id="LOCAL-00007" summary="23 July-11:08">
+      <created>1627063724311</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1627063724311</updated>
+    </task>
+    <task id="LOCAL-00008" summary="25 July- Requests for hosts recycler view is done">
+      <created>1627281758990</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1627281758990</updated>
+    </task>
+    <task id="LOCAL-00009" summary="25 July- Requests for hosts recycler view is done(2)">
+      <created>1627282309295</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1627282309295</updated>
+    </task>
+    <task id="LOCAL-00010" summary="26 July- page: where host can see the list of cars they added is created">
+      <created>1627318567011</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1627318567011</updated>
+    </task>
+    <task id="LOCAL-00011" summary="31 July- page: Policy page for customer added and a message shows in another page to inform they need to wait for host to accept their request">
+      <created>1627793104495</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1627793104496</updated>
+    </task>
+    <task id="LOCAL-00012" summary="31 July - First version of style added">
+      <created>1627797064467</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1627797064467</updated>
+    </task>
+    <task id="LOCAL-00013" summary="1 August - Login Style changed">
+      <created>1627850245997</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1627850245997</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="second commit" />
+    <MESSAGE value="host adding car page commit" />
+    <MESSAGE value="host adding car page commit second commit" />
+    <MESSAGE value="host adding car page commit third commit" />
+    <MESSAGE value="host adding car page commit fourth commit" />
+    <MESSAGE value="host adding car page commit fifth commit" />
+    <MESSAGE value="scrollbar added" />
+    <MESSAGE value="during the meeting" />
+    <MESSAGE value="23 July-11:08" />
+    <MESSAGE value="25 July- Requests for hosts recycler view is done" />
+    <MESSAGE value="25 July- Requests for hosts recycler view is done(2)" />
+    <MESSAGE value="26 July- page: where host can see the list of cars they added is created" />
+    <MESSAGE value="31 July- page: Policy page for customer added and a message shows in another page to inform they need to wait for host to accept their request" />
+    <MESSAGE value="31 July - First version of style added" />
+    <MESSAGE value="1 August - Login Style changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 August - Login Style changed" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="267" y="19" key="#Inspections" timestamp="1627843514774">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="267" y="19" key="#Inspections/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627843514774" />
+    <state x="393" y="165" key="#Notifications" timestamp="1626297191013">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="393" y="165" key="#Notifications/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1626297191013" />
+    <state x="158" y="87" key="#PSD" timestamp="1627950615828">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="158" y="87" key="#PSD/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627950615828" />
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1627315869808">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627315869808" />
+    <state x="692" y="199" width="432" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1627317998535">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="692" y="199" width="432" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627317998535" />
+    <state x="648" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1627850151853">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="648" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627850151853" />
+    <state x="348" y="175" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1626761973108">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="348" y="175" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1626761973108" />
+    <state x="93" y="93" width="1095" height="495" key="AVDManager" timestamp="1626145640805">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="93" y="93" width="1095" height="495" key="AVDManager/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1626145640804" />
+    <state x="271" y="151" key="AndroidCreateResourceFileDialog" timestamp="1627847306507">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="271" y="151" key="AndroidCreateResourceFileDialog/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627847306507" />
+    <state x="325" y="200" width="324" height="447" key="AndroidCreateXmlResourceDialog" timestamp="1627970469655">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="325" y="200" width="324" height="447" key="AndroidCreateXmlResourceDialog/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627970469655" />
+    <state x="-216" y="127" width="838" height="544" key="AndroidThemeDialog" timestamp="1627860164034">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="-216" y="127" width="838" height="544" key="AndroidThemeDialog/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627860164034" />
+    <state x="12" y="59" width="1220" height="579" key="DiffContextDialog" timestamp="1626839652998">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="12" y="59" width="1220" height="579" key="DiffContextDialog/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1626839652998" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1627846269993">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="96" key="FileChooserDialogImpl/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627846269993" />
+    <state width="363" height="312" key="Git.Branch.Popup" timestamp="1627795138406">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="363" height="312" key="Git.Branch.Popup/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627795138406" />
+    <state width="1237" height="139" key="GridCell.Tab.0.bottom" timestamp="1627967799231">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="139" key="GridCell.Tab.0.bottom/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627967799231" />
+    <state width="1237" height="139" key="GridCell.Tab.0.center" timestamp="1627967799231">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="139" key="GridCell.Tab.0.center/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627967799231" />
+    <state width="1237" height="139" key="GridCell.Tab.0.left" timestamp="1627967799231">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="139" key="GridCell.Tab.0.left/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627967799231" />
+    <state width="1237" height="139" key="GridCell.Tab.0.right" timestamp="1627967799231">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="139" key="GridCell.Tab.0.right/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627967799231" />
+    <state x="121" y="51" key="MergeDialog" timestamp="1626834247421">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="51" key="MergeDialog/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1626834247421" />
+    <state x="280" y="102" key="MultipleFileMergeDialog" timestamp="1626834247434">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="280" y="102" key="MultipleFileMergeDialog/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1626834247434" />
+    <state x="320" y="61" key="RollbackChangesDialog" timestamp="1627936247972">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="320" y="61" key="RollbackChangesDialog/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627936247972" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1627850261141">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627850261141" />
+    <state x="452" y="119" key="chooseDestDirectoryDialog" timestamp="1627850161536">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="452" y="119" key="chooseDestDirectoryDialog/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627850161536" />
+    <state x="93" y="93" width="1095" height="495" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1626839022739">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="93" y="93" width="1095" height="495" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1626839022739" />
+    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1627797081288">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627797081288" />
+    <state x="68" y="147" width="1141" height="667" key="dock-window-1" timestamp="1627314456744">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="68" y="147" width="1141" height="667" key="dock-window-1/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627314456744" />
+    <state x="126" y="143" width="834" height="668" key="dock-window-2" timestamp="1627788774908">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="126" y="143" width="834" height="668" key="dock-window-2/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627788774908" />
+    <state x="2099" y="-138" width="1141" height="667" key="dock-window-3" timestamp="1627314456745">
+      <screen x="1920" y="-359" width="1280" height="680" />
+    </state>
+    <state x="2099" y="-138" width="1141" height="667" key="dock-window-3/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1627314456745" />
+    <state x="352" y="54" key="git4idea.branch.GitSmartOperationDialog" timestamp="1626839654883">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="352" y="54" key="git4idea.branch.GitSmartOperationDialog/1920.-359.1280.680/0.0.1280.680@0.0.1280.680" timestamp="1626839654883" />
+  </component>
+</project>

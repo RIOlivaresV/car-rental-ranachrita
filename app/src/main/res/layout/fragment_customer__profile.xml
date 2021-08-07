@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Customer_Profile"
+    android:id="@+id/Customer_Profile">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/CustomerProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:gravity="center"
+        android:text="@string/hostProfile"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:id="@+id/profileLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/CustomerFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center|left"
+                android:text="@string/hostFirstName"
+                android:textSize="25dp" />
+
+
+            <TextView
+                android:id="@+id/txtCustomerFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center|left"/>
+              //  android:text="@string/txtHostFirstName"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/CustomerSurname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center|left"
+                android:text="@string/hostSurname"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/txtCustomerSurname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center|left"/>
+               // android:text="@string/txtHostSurname"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/CustomerPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center|left"
+                android:text="@string/hostPhoneNumber"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/txtCustomerPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center|left"/>
+              //  android:text="@string/txtHostPhoneNumber"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/CustomerEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center|left"
+                android:text="@string/hostEmail"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/txtCustomerEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center|left"/>
+            // android:text="@string/txtHostEmail"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/CustomerPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center|left"
+                android:text="@string/hostPassword"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/txtCustomerPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center|left"/>
+            //  android:text="@string/txtHostPassword"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+
+
+            <LinearLayout
+                android:id="@+id/ButtonLinearLayouton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="100dp"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="150dp"
+                    android:layout_height="58dp"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:onClick="logout"
+                    android:text="Logout"
+                    android:textSize="15dp"  />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

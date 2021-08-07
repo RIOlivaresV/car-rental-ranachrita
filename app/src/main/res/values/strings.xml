@@ -101,7 +101,7 @@
     <string name="uploadImage">Upload Image</string>
     <string name="carDetail">Car Detail</string>
     <string name="carAvailability">Car Availability</string>
-    <string name="txtLocationHost">location</string>
+    <string name="txtLocationHost">Location</string>
     <string name="txtCarColor">Color</string>
     <string name="odometer">Odometer</string>
     <string name="automaticBtn">Automatic</string>
@@ -115,7 +115,7 @@
     <string name="hostFirstName">First Name</string>
     <string name="txtHostFirstName">Christy</string>
     <string name="hostSurname">Surname</string>
-    <string name="txtHostSurname">Kinmunju</string>
+    <string name="txtHostSurname">Kunjumon</string>
     <string name="hostPhoneNumber">Phone Number</string>
     <string name="txtHostPhoneNumber">+1 777-888-9999</string>
     <string name="hostEmail">Email</string>
@@ -155,5 +155,9 @@
     <string name="txtCCVTopic">CVC:</string>
     <string name="editTxtExpirationDate">Month/Year</string>
     <string name="editTxtCVC">Enter CVC</string>
-    <string name="btnPayThePayment">PAY</string>
+    <string name="btnPayThePayment">ADD</string>
+    <string name="seat">Seats</string>
+    <string name="door">Doors</string>
+    <string name="txtSplash">Welcome to RANACHRITA!</string>
+
 </resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/showCarRequestForHost"
+        android:icon="@drawable/home"
+        android:title="Home" />
+    <item
+        android:id="@+id/hostProfile"
+        android:icon="@drawable/profile"
+        android:title="Profile" />
+    <item android:title="Add Car"
+        android:id="@+id/addCar"
+        android:icon="@drawable/ic_car"/>
+
+</menu>

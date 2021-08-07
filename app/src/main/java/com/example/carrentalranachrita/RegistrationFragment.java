@@ -87,9 +87,6 @@ public class RegistrationFragment extends Fragment {
                String confirmPassword = confirmPasswordEdit.getText().toString();
                //String rol = r.getText().toString();
 
-               // get selected radio button from radioGroup
-               String rol = String.valueOf(radioGroup.getCheckedRadioButtonId());
-
 
                if (name.isEmpty()){
                    nameEdit.setError("Name is required");
@@ -154,7 +151,8 @@ public class RegistrationFragment extends Fragment {
                        return;
                    }
 
-
+               // get selected radio button from radioGroup
+               String rol = String.valueOf(r.getText().toString());
 
                User user = new User(name, lastName,email, phoneNummber, password, rol );
                mAuth.createUserWithEmailAndPassword(email, password)
@@ -165,6 +163,9 @@ public class RegistrationFragment extends Fragment {
                                    UserDao dao = new UserDao();
                                    Boolean isSuccess = dao.Insert(user);
                                    if (isSuccess){
+
+
+
                                        findNavController(view).navigate(R.id.backLogin);
                                        Toast.makeText(view.getContext(), "User created", Toast.LENGTH_LONG ).show();
                                    }

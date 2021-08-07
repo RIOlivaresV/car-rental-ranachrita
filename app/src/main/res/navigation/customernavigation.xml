@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/customernavigation"
+    app:startDestination="@id/carList">
+    <fragment
+        android:id="@+id/carList"
+        android:name="com.example.carrentalranachrita.CarList"
+        android:label="fragment_car_list"
+        tools:layout="@layout/fragment_car_list" >
+        <action
+            android:id="@+id/action_carList_to_filterFragment"
+            app:destination="@id/filterFragment" />
+        <action
+            android:id="@+id/carlistToDetails"
+            app:destination="@id/carDetail2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/carDetail2"
+        android:name="com.example.carrentalranachrita.CarDetail"
+        android:label="fragment_car_detail"
+        tools:layout="@layout/fragment_car_detail" />
+
+    <fragment
+        android:id="@+id/confirmBookingForCustomer"
+        android:name="com.example.carrentalranachrita.confirmBookingForCustomer"
+        android:label="fragment_confirm_booking_for_customer"
+        tools:layout="@layout/fragment_confirm_booking_for_customer" />
+
+    <fragment
+        android:id="@+id/Add_Card"
+        android:name="com.example.carrentalranachrita.customerAddCardForPayment"
+        android:label="fragment_customer_add_card_for_payment"
+        tools:layout="@layout/fragment_customer_add_card_for_payment" />
+
+    <fragment
+        android:id="@+id/customerPolicyPage"
+        android:name="com.example.carrentalranachrita.customerPolicyPage"
+        android:label="fragment_customer_policy_page"
+        tools:layout="@layout/fragment_customer_policy_page" />
+
+
+    <fragment
+        android:id="@+id/Customer_Profile"
+        android:name="com.example.carrentalranachrita.Customer_Profile"
+        android:label="fragment_customer_profile"
+        tools:layout="@layout/fragment_customer__profile" >
+
+    </fragment>
+
+</navigation>

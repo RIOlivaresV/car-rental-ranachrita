@@ -1,5 +1,7 @@
 package com.example.carrentalranachrita;
 
+import static androidx.navigation.Navigation.findNavController;
+
 import android.app.DatePickerDialog;
 import android.net.Uri;
 import android.os.Build;
@@ -8,6 +10,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,13 +23,20 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.carrentalranachrita.Daos.BookingDao;
 import com.example.carrentalranachrita.Daos.CarDao;
 import com.example.carrentalranachrita.Daos.DaoCarImg;
+import com.example.carrentalranachrita.Entities.Booking;
 import com.example.carrentalranachrita.Entities.Car;
+import com.example.carrentalranachrita.Entities.Insurence;
+import com.example.carrentalranachrita.Entities.Rate;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
@@ -87,6 +98,9 @@ public class CarDetail extends Fragment {
         CheckBox checkboxInput = view.findViewById(R.id.needDrivercheckBox);
         TextView ownerInput = view.findViewById(R.id.hostNameValueTextView);
         Button Submit = view.findViewById(R.id.bookButton);
+        Button insurance =view.findViewById(R.id.addInsuranceButton);
+        Insurence insurances = new Insurence();
+        insurances.setInsurance("12456312");
         Button checkAvialability = view.findViewById(R.id.checkAvailabilityButton);
         TextView priceInput = view.findViewById(R.id.priceValueTextView);
         ProgressBar progressBar = view.findViewById(R.id.progressBarCarDetails);
@@ -156,10 +170,17 @@ public class CarDetail extends Fragment {
                 refoundDate.add(Calendar.DATE, -1);
                 refoundInput.setText("Full refund before "+sdf.format(refoundDate.getTime()));
                 checkboxInput.setChecked(car.isOwnerDriver());
-                priceInput.setText("$"+car.getPrice());
+                priceInput.setText("$"+car.getPrice() + " CAD - Per Night");
                 ownerInput.setText(car.getHostId());
                 checkAvialability.setOnClickListener(v -> {
-                    Snackbar.make(view, "You click me", Snackbar.LENGTH_LONG).show();
+
+                    Snackbar.make(view, "Awesome! Car is available in this period. ", Snackbar.LENGTH_LONG).show();
+                });
+                insurance.setOnClickListener(v ->{
+
+                    insurances.setInsurance("12456312");
+
+
                 });
                 StorageReference imgRef = new DaoCarImg().SelectPiture(car.getHostId().replace("@", ""), car);
 
@@ -180,7 +201,7 @@ public class CarDetail extends Fragment {
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull @NotNull Exception e) {
-                        Snackbar.make(view, "Something was wrong with your picture, refresh it.", Snackbar.LENGTH_LONG).show();
+                        //Snackbar.make(view, "Something was wrong with your picture, refresh it.", Snackbar.LENGTH_LONG).show();
                     }
                 });
                 progressBar.setVisibility(View.GONE);
@@ -191,6 +212,36 @@ public class CarDetail extends Fragment {
 
             }
         });
+
+               //paste here
+        Submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Rate rates = new Rate();
+
+                rates.setRate(priceInput.toString());
+
+                FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
+
+                Booking newBooking = new Booking();
+
+                newBooking.setCustomerId(currentFirebaseUser.getEmail());
+                newBooking.setDateEnd(dateEnd.toString());
+                newBooking.setDateStart(dateStart.toString());
+                newBooking.setInsurence(insurances);
+                newBooking.setRate(rates);
+                //newBooking.setTimeEnd();
+               // newBooking.setTimeStart();
+
+                BookingDao bookings = new BookingDao();
+                bookings.Insert(newBooking);
+
+                findNavController(v).navigate(R.id.confirmBookingForCustomer);
+            }
+        });
+
+
         return view;
     }
 }
