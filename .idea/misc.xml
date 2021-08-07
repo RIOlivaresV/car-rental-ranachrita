@@ -3,27 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Rafa files/Ranachrita/app/src/main/res/layout/activity_customer.xml" value="0.2789115646258503" />
-        <entry key="..\:/Rafa files/Ranachrita/app/src/main/res/layout/activity_host.xml" value="0.4" />
-        <entry key="..\:/Rafa files/Ranachrita/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
-        <entry key="..\:/Rafa files/Ranachrita/app/src/main/res/layout/fragment_car_detail.xml" value="0.18333333333333332" />
-        <entry key="..\:/Rafa files/Ranachrita/app/src/main/res/layout/fragment_confirm_booking_for_customer.xml" value="0.18333333333333332" />
-        <entry key="..\:/Rafa files/Ranachrita/app/src/main/res/layout/fragment_customer__profile.xml" value="0.4" />
-        <entry key="..\:/Rafa files/Ranachrita/app/src/main/res/layout/fragment_customer_add_card_for_payment.xml" value="0.23854166666666668" />
-        <entry key="..\:/Rafa files/Ranachrita/app/src/main/res/layout/fragment_filter.xml" value="0.25416666666666665" />
-        <entry key="..\:/Rafa files/Ranachrita/app/src/main/res/layout/fragment_host_add_car.xml" value="0.264" />
-        <entry key="..\:/Rafa files/Ranachrita/app/src/main/res/layout/fragment_host_profile.xml" value="0.2" />
-        <entry key="..\:/Rafa files/Ranachrita/app/src/main/res/layout/fragment_payment__page.xml" value="0.18385416666666668" />
-        <entry key="..\:/Rafa files/Ranachrita/app/src/main/res/layout/fragment_show_car_request_for_host.xml" value="0.2" />
-        <entry key="..\:/Rafa files/Ranachrita/app/src/main/res/layout/fragment_show_list_of_cars_added_by_host.xml" value="0.18385416666666668" />
-        <entry key="..\:/Rafa files/Ranachrita/app/src/main/res/layout/recyclerview_host_requests.xml" value="0.264" />
-        <entry key="..\:/Rafa files/Ranachrita/app/src/main/res/menu/bottom_navigation_customer.xml" value="0.18385416666666668" />
-        <entry key="..\:/Rafa files/Ranachrita/app/src/main/res/menu/bottom_navigation_host.xml" value="0.18333333333333332" />
-        <entry key="..\:/Rafa files/Ranachrita/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2" />
+        <entry key="..\:/Users/chris/Downloads/V1/car-rental-ranachrita-Christy(3)/app/src/main/res/layout/fragment_car_detail.xml" value="0.536" />
+        <entry key="..\:/Users/chris/Downloads/V1/car-rental-ranachrita-Christy(3)/app/src/main/res/layout/fragment_confirm_booking_for_customer.xml" value="0.23324275362318841" />
+        <entry key="..\:/Users/chris/Downloads/V1/car-rental-ranachrita-Christy(3)/app/src/main/res/layout/fragment_customer_add_card_for_payment.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/chris/Downloads/V1/car-rental-ranachrita-Christy(3)/app/src/main/res/menu/bottom_navigation_customer.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

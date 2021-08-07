@@ -9,8 +9,10 @@
         android:id="@+id/hostProfile"
         android:icon="@drawable/profile"
         android:title="Profile" />
+
+
     <item android:title="Add Car"
-        android:id="@+id/addCar"
+        android:id="@+id/hostAddCar"
         android:icon="@drawable/ic_car"/>
 
 </menu>

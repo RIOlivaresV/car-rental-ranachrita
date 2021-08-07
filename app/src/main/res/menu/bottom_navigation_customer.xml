@@ -5,10 +5,12 @@
         android:id="@+id/carList"
         android:icon="@drawable/home"
         android:title="Home" />
+
     <item
         android:id="@+id/Customer_Profile"
         android:icon="@drawable/profile"
         android:title="Profile" />
+
     <item
         android:id="@+id/Payment_Page"
         android:icon="@drawable/creditcard"
